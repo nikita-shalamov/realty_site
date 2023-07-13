@@ -1,0 +1,3242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ab285e836d76d4bf7f9a5345668f0bd0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ab285e836d76d4bf7f9a5345668f0bd0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ab285e836d76d4bf7f9a5345668f0bd0 = L.map(
+                "map_ab285e836d76d4bf7f9a5345668f0bd0",
+                {
+                    center: [58.00104, 56.2144],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e98f9fbe49f891eac641166d28615b65 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        
+    
+            var tile_layer_3c2dd6713f46d657830e34eb51f2be3d = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        
+    
+        function geo_json_3963620c52c36db1b5366a949f7c1d9c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_3963620c52c36db1b5366a949f7c1d9c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3963620c52c36db1b5366a949f7c1d9c = L.geoJson(null, {
+                onEachFeature: geo_json_3963620c52c36db1b5366a949f7c1d9c_onEachFeature,
+            
+                style: geo_json_3963620c52c36db1b5366a949f7c1d9c_styler,
+        });
+
+        function geo_json_3963620c52c36db1b5366a949f7c1d9c_add (data) {
+            geo_json_3963620c52c36db1b5366a949f7c1d9c
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_3963620c52c36db1b5366a949f7c1d9c_add({"features": [{"geometry": {"coordinates": [[[56.226974070266095, 58.0090665879585], [56.227768169525575, 58.00765620578716], [56.22838364666504, 58.006755657638394], [56.23033357114829, 58.00373920187883], [56.240342825343774, 58.005499997189716], [56.2436211834912, 58.00655615248368], [56.23862614766085, 58.01135094875005], [56.23422427097661, 58.01030527817626], [56.226974070266095, 58.0090665879585]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c5496583542fef5c9532f712b065ad7e = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_5c7d6f0dba4b7e4379dc257730fd86b1 = $(`<div id="html_5c7d6f0dba4b7e4379dc257730fd86b1" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 98,256.0р.</div>`)[0];
+                popup_c5496583542fef5c9532f712b065ad7e.setContent(html_5c7d6f0dba4b7e4379dc257730fd86b1);
+            
+        
+
+        geo_json_3963620c52c36db1b5366a949f7c1d9c.bindPopup(popup_c5496583542fef5c9532f712b065ad7e)
+        ;
+
+        
+    
+    
+        function geo_json_7b993fe7798a67e01c07fbe08d12d78a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FF5E7B", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_7b993fe7798a67e01c07fbe08d12d78a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7b993fe7798a67e01c07fbe08d12d78a = L.geoJson(null, {
+                onEachFeature: geo_json_7b993fe7798a67e01c07fbe08d12d78a_onEachFeature,
+            
+                style: geo_json_7b993fe7798a67e01c07fbe08d12d78a_styler,
+        });
+
+        function geo_json_7b993fe7798a67e01c07fbe08d12d78a_add (data) {
+            geo_json_7b993fe7798a67e01c07fbe08d12d78a
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_7b993fe7798a67e01c07fbe08d12d78a_add({"features": [{"geometry": {"coordinates": [[[56.344868020321144, 58.01019125036166], [56.337734947749794, 58.01448417732709], [56.3273044648617, 58.011960080470345], [56.3327932536705, 58.00782140579696], [56.33607498012353, 58.00752654106114], [56.34251146906959, 58.007335532868666], [56.344868020321144, 58.01019125036166]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c5100ac7603459fa6ea7fe5f72b8cfa5 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_e3c436abf9ab19d9c91b3f9723badd2d = $(`<div id="html_e3c436abf9ab19d9c91b3f9723badd2d" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 124,601.0р.</div>`)[0];
+                popup_c5100ac7603459fa6ea7fe5f72b8cfa5.setContent(html_e3c436abf9ab19d9c91b3f9723badd2d);
+            
+        
+
+        geo_json_7b993fe7798a67e01c07fbe08d12d78a.bindPopup(popup_c5100ac7603459fa6ea7fe5f72b8cfa5)
+        ;
+
+        
+    
+    
+        function geo_json_7049304d1d1fc6926a62d7830f462adc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FF5E7B", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_7049304d1d1fc6926a62d7830f462adc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7049304d1d1fc6926a62d7830f462adc = L.geoJson(null, {
+                onEachFeature: geo_json_7049304d1d1fc6926a62d7830f462adc_onEachFeature,
+            
+                style: geo_json_7049304d1d1fc6926a62d7830f462adc_styler,
+        });
+
+        function geo_json_7049304d1d1fc6926a62d7830f462adc_add (data) {
+            geo_json_7049304d1d1fc6926a62d7830f462adc
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_7049304d1d1fc6926a62d7830f462adc_add({"features": [{"geometry": {"coordinates": [[[56.257172570978724, 58.01029845931342], [56.26093135652388, 58.006399153953225], [56.265185311422414, 58.00632760309671], [56.26925755409735, 58.00603711808361], [56.269297383840716, 58.0065839020448], [56.265276515312635, 58.010275777302255], [56.264575002069876, 58.01141312941374], [56.26375497810812, 58.01211101250832], [56.260436187170455, 58.011192735514385], [56.257172570978724, 58.01029845931342]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1157e61fd4a7b53a3f1ce2248112fb86 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_8c4dba1ece7880e41258d8c4e14f31b9 = $(`<div id="html_8c4dba1ece7880e41258d8c4e14f31b9" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 122,825.0р.</div>`)[0];
+                popup_1157e61fd4a7b53a3f1ce2248112fb86.setContent(html_8c4dba1ece7880e41258d8c4e14f31b9);
+            
+        
+
+        geo_json_7049304d1d1fc6926a62d7830f462adc.bindPopup(popup_1157e61fd4a7b53a3f1ce2248112fb86)
+        ;
+
+        
+    
+    
+        function geo_json_66d1b926166bed0cbadf0e083484a044_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FF5E7B", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_66d1b926166bed0cbadf0e083484a044_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_66d1b926166bed0cbadf0e083484a044 = L.geoJson(null, {
+                onEachFeature: geo_json_66d1b926166bed0cbadf0e083484a044_onEachFeature,
+            
+                style: geo_json_66d1b926166bed0cbadf0e083484a044_styler,
+        });
+
+        function geo_json_66d1b926166bed0cbadf0e083484a044_add (data) {
+            geo_json_66d1b926166bed0cbadf0e083484a044
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_66d1b926166bed0cbadf0e083484a044_add({"features": [{"geometry": {"coordinates": [[[56.24842774915888, 58.01953664916539], [56.25241408128923, 58.015308185732806], [56.25799573377907, 58.01689226300303], [56.25659818684838, 58.01825297206466], [56.25430683975904, 58.01760328774762], [56.25302572449422, 58.01894177985699], [56.252200896857914, 58.01880235593211], [56.25128832159976, 58.019638891331624], [56.25058634063356, 58.01950876488729], [56.25011250347973, 58.02000138392998], [56.24842774915888, 58.01953664916539]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_fc4c1f1a3e4cfebd426648c3c56246dc = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_b50b70c0926aa08c548194a2a4d7f0f7 = $(`<div id="html_b50b70c0926aa08c548194a2a4d7f0f7" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 118,644.0р.</div>`)[0];
+                popup_fc4c1f1a3e4cfebd426648c3c56246dc.setContent(html_b50b70c0926aa08c548194a2a4d7f0f7);
+            
+        
+
+        geo_json_66d1b926166bed0cbadf0e083484a044.bindPopup(popup_fc4c1f1a3e4cfebd426648c3c56246dc)
+        ;
+
+        
+    
+    
+        function geo_json_e6756282eb70c4870443b15232350fb2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_e6756282eb70c4870443b15232350fb2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e6756282eb70c4870443b15232350fb2 = L.geoJson(null, {
+                onEachFeature: geo_json_e6756282eb70c4870443b15232350fb2_onEachFeature,
+            
+                style: geo_json_e6756282eb70c4870443b15232350fb2_styler,
+        });
+
+        function geo_json_e6756282eb70c4870443b15232350fb2_add (data) {
+            geo_json_e6756282eb70c4870443b15232350fb2
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_e6756282eb70c4870443b15232350fb2_add({"features": [{"geometry": {"coordinates": [[[56.23457557770607, 58.015743391742916], [56.2388278834446, 58.01142357104629], [56.246338475957714, 58.01358460416844], [56.242305490954266, 58.01781867778118], [56.23457557770607, 58.015743391742916]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_225e1865adf6cd20e65172e5d7b9f784 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_c725df24598cf7bb585b795d38ff127d = $(`<div id="html_c725df24598cf7bb585b795d38ff127d" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_225e1865adf6cd20e65172e5d7b9f784.setContent(html_c725df24598cf7bb585b795d38ff127d);
+            
+        
+
+        geo_json_e6756282eb70c4870443b15232350fb2.bindPopup(popup_225e1865adf6cd20e65172e5d7b9f784)
+        ;
+
+        
+    
+    
+        function geo_json_7c113a423ae94031006544db7364db64_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FD9A98", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_7c113a423ae94031006544db7364db64_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7c113a423ae94031006544db7364db64 = L.geoJson(null, {
+                onEachFeature: geo_json_7c113a423ae94031006544db7364db64_onEachFeature,
+            
+                style: geo_json_7c113a423ae94031006544db7364db64_styler,
+        });
+
+        function geo_json_7c113a423ae94031006544db7364db64_add (data) {
+            geo_json_7c113a423ae94031006544db7364db64
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_7c113a423ae94031006544db7364db64_add({"features": [{"geometry": {"coordinates": [[[56.19615748480149, 58.0039985343293], [56.19616869686381, 58.00339386846848], [56.20617032938304, 58.00241108647688], [56.21175468825284, 58.00179161835911], [56.21607525492584, 58.0014776155065], [56.214364139415395, 58.00458354375408], [56.21285054955018, 58.006730191669504], [56.19615748480149, 58.0039985343293]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_bb5160e54a241da10160e4ea99c35541 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_7d5190e1e092d9126ee0c3d57a65e48c = $(`<div id="html_7d5190e1e092d9126ee0c3d57a65e48c" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 106,860.0р.</div>`)[0];
+                popup_bb5160e54a241da10160e4ea99c35541.setContent(html_7d5190e1e092d9126ee0c3d57a65e48c);
+            
+        
+
+        geo_json_7c113a423ae94031006544db7364db64.bindPopup(popup_bb5160e54a241da10160e4ea99c35541)
+        ;
+
+        
+    
+    
+        function geo_json_033bdde91f28afaeb27633bad1d7e9b4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FF5E7B", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_033bdde91f28afaeb27633bad1d7e9b4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_033bdde91f28afaeb27633bad1d7e9b4 = L.geoJson(null, {
+                onEachFeature: geo_json_033bdde91f28afaeb27633bad1d7e9b4_onEachFeature,
+            
+                style: geo_json_033bdde91f28afaeb27633bad1d7e9b4_styler,
+        });
+
+        function geo_json_033bdde91f28afaeb27633bad1d7e9b4_add (data) {
+            geo_json_033bdde91f28afaeb27633bad1d7e9b4
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_033bdde91f28afaeb27633bad1d7e9b4_add({"features": [{"geometry": {"coordinates": [[[56.21280425286048, 58.00675192944303], [56.21466646762008, 58.00386354648171], [56.216225185871025, 58.00134851470395], [56.230402012497706, 58.003774180914306], [56.226954493628824, 58.00905424967283], [56.21280425286048, 58.00675192944303]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8a9cff770aec8dabb2752162911d77fe = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_1b10da8f7f17d93bfbf72f14ff59828a = $(`<div id="html_1b10da8f7f17d93bfbf72f14ff59828a" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 118,550.0р.</div>`)[0];
+                popup_8a9cff770aec8dabb2752162911d77fe.setContent(html_1b10da8f7f17d93bfbf72f14ff59828a);
+            
+        
+
+        geo_json_033bdde91f28afaeb27633bad1d7e9b4.bindPopup(popup_8a9cff770aec8dabb2752162911d77fe)
+        ;
+
+        
+    
+    
+        function geo_json_efcb47b22af790a5a9714983d7ef94c8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#D8175C", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_efcb47b22af790a5a9714983d7ef94c8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_efcb47b22af790a5a9714983d7ef94c8 = L.geoJson(null, {
+                onEachFeature: geo_json_efcb47b22af790a5a9714983d7ef94c8_onEachFeature,
+            
+                style: geo_json_efcb47b22af790a5a9714983d7ef94c8_styler,
+        });
+
+        function geo_json_efcb47b22af790a5a9714983d7ef94c8_add (data) {
+            geo_json_efcb47b22af790a5a9714983d7ef94c8
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_efcb47b22af790a5a9714983d7ef94c8_add({"features": [{"geometry": {"coordinates": [[[56.22408811013631, 58.01385346460347], [56.22704806393949, 58.0090586480396], [56.23891234157526, 58.011261751641996], [56.23453562858893, 58.01565222037769], [56.22408811013631, 58.01385346460347]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8d028b2ad3f8f3ceb6338b66a335f9d1 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_2a6eb6888a9de9e8a856be6208793029 = $(`<div id="html_2a6eb6888a9de9e8a856be6208793029" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 142,510.0р.</div>`)[0];
+                popup_8d028b2ad3f8f3ceb6338b66a335f9d1.setContent(html_2a6eb6888a9de9e8a856be6208793029);
+            
+        
+
+        geo_json_efcb47b22af790a5a9714983d7ef94c8.bindPopup(popup_8d028b2ad3f8f3ceb6338b66a335f9d1)
+        ;
+
+        
+    
+    
+        function geo_json_32783145bb4efb623349229c8ee58141_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FF5E7B", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_32783145bb4efb623349229c8ee58141_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_32783145bb4efb623349229c8ee58141 = L.geoJson(null, {
+                onEachFeature: geo_json_32783145bb4efb623349229c8ee58141_onEachFeature,
+            
+                style: geo_json_32783145bb4efb623349229c8ee58141_styler,
+        });
+
+        function geo_json_32783145bb4efb623349229c8ee58141_add (data) {
+            geo_json_32783145bb4efb623349229c8ee58141
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_32783145bb4efb623349229c8ee58141_add({"features": [{"geometry": {"coordinates": [[[56.23737457761021, 58.004956649334815], [56.23897345606656, 58.00155186652049], [56.2430460710018, 57.99808281109995], [56.24956225489791, 57.99998523795318], [56.2434684162541, 58.00650707691739], [56.24066283707677, 58.00567592821383], [56.23737457761021, 58.004956649334815]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_60210e45eae5fdd7d5a6bb42779a88dd = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_63db9fcc91732600d9a1220a35894e85 = $(`<div id="html_63db9fcc91732600d9a1220a35894e85" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 119,380.0р.</div>`)[0];
+                popup_60210e45eae5fdd7d5a6bb42779a88dd.setContent(html_63db9fcc91732600d9a1220a35894e85);
+            
+        
+
+        geo_json_32783145bb4efb623349229c8ee58141.bindPopup(popup_60210e45eae5fdd7d5a6bb42779a88dd)
+        ;
+
+        
+    
+    
+        function geo_json_34ac71306efb22b37a1c5c057c3d92fe_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#D8175C", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_34ac71306efb22b37a1c5c057c3d92fe_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_34ac71306efb22b37a1c5c057c3d92fe = L.geoJson(null, {
+                onEachFeature: geo_json_34ac71306efb22b37a1c5c057c3d92fe_onEachFeature,
+            
+                style: geo_json_34ac71306efb22b37a1c5c057c3d92fe_styler,
+        });
+
+        function geo_json_34ac71306efb22b37a1c5c057c3d92fe_add (data) {
+            geo_json_34ac71306efb22b37a1c5c057c3d92fe
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_34ac71306efb22b37a1c5c057c3d92fe_add({"features": [{"geometry": {"coordinates": [[[56.23882001864811, 58.01136232911895], [56.244853554847964, 58.00508293506141], [56.25255644888958, 58.007193035441645], [56.246436949624126, 58.01353733386463], [56.23882001864811, 58.01136232911895]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_39693dc422a5526f15afaef291b1fa04 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_be917a905f864c01442195f2107bbb6f = $(`<div id="html_be917a905f864c01442195f2107bbb6f" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 133,915.0р.</div>`)[0];
+                popup_39693dc422a5526f15afaef291b1fa04.setContent(html_be917a905f864c01442195f2107bbb6f);
+            
+        
+
+        geo_json_34ac71306efb22b37a1c5c057c3d92fe.bindPopup(popup_39693dc422a5526f15afaef291b1fa04)
+        ;
+
+        
+    
+    
+        function geo_json_e565fb2d5eeea211afb226d7bee84255_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_e565fb2d5eeea211afb226d7bee84255_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e565fb2d5eeea211afb226d7bee84255 = L.geoJson(null, {
+                onEachFeature: geo_json_e565fb2d5eeea211afb226d7bee84255_onEachFeature,
+            
+                style: geo_json_e565fb2d5eeea211afb226d7bee84255_styler,
+        });
+
+        function geo_json_e565fb2d5eeea211afb226d7bee84255_add (data) {
+            geo_json_e565fb2d5eeea211afb226d7bee84255
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_e565fb2d5eeea211afb226d7bee84255_add({"features": [{"geometry": {"coordinates": [[[56.242978035493195, 57.99810972869696], [56.24769650704741, 57.99388062287747], [56.253976237571806, 57.99537006060012], [56.24963940709927, 58.00005862671878], [56.242978035493195, 57.99810972869696]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9514f6dfd735f123f5e92e1ad46c10b4 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_61b5945822133b69e9094745ab43720a = $(`<div id="html_61b5945822133b69e9094745ab43720a" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 96,086.0р.</div>`)[0];
+                popup_9514f6dfd735f123f5e92e1ad46c10b4.setContent(html_61b5945822133b69e9094745ab43720a);
+            
+        
+
+        geo_json_e565fb2d5eeea211afb226d7bee84255.bindPopup(popup_9514f6dfd735f123f5e92e1ad46c10b4)
+        ;
+
+        
+    
+    
+        function geo_json_25ca488a58e7d0eb99e4df4deb5f3142_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_25ca488a58e7d0eb99e4df4deb5f3142_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_25ca488a58e7d0eb99e4df4deb5f3142 = L.geoJson(null, {
+                onEachFeature: geo_json_25ca488a58e7d0eb99e4df4deb5f3142_onEachFeature,
+            
+                style: geo_json_25ca488a58e7d0eb99e4df4deb5f3142_styler,
+        });
+
+        function geo_json_25ca488a58e7d0eb99e4df4deb5f3142_add (data) {
+            geo_json_25ca488a58e7d0eb99e4df4deb5f3142
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_25ca488a58e7d0eb99e4df4deb5f3142_add({"features": [{"geometry": {"coordinates": [[[56.29951047929117, 58.00111602944423], [56.29728889910845, 58.00056886600288], [56.29578698574559, 57.99942476996637], [56.29456668113741, 57.99864543723953], [56.29278315901871, 57.99784950545674], [56.3022014074005, 57.99337205949155], [56.304954915233196, 57.994980687849505], [56.29951047929117, 58.00111602944423]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_24fbf4bc782f88ce147cb01d3ee6d947 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_99cfd775b99156720513e10b6765ff4f = $(`<div id="html_99cfd775b99156720513e10b6765ff4f" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 89,573.0р.</div>`)[0];
+                popup_24fbf4bc782f88ce147cb01d3ee6d947.setContent(html_99cfd775b99156720513e10b6765ff4f);
+            
+        
+
+        geo_json_25ca488a58e7d0eb99e4df4deb5f3142.bindPopup(popup_24fbf4bc782f88ce147cb01d3ee6d947)
+        ;
+
+        
+    
+    
+        function geo_json_69b16e27fcd68ded51e2e3f230e26620_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#79D5C3", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_69b16e27fcd68ded51e2e3f230e26620_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_69b16e27fcd68ded51e2e3f230e26620 = L.geoJson(null, {
+                onEachFeature: geo_json_69b16e27fcd68ded51e2e3f230e26620_onEachFeature,
+            
+                style: geo_json_69b16e27fcd68ded51e2e3f230e26620_styler,
+        });
+
+        function geo_json_69b16e27fcd68ded51e2e3f230e26620_add (data) {
+            geo_json_69b16e27fcd68ded51e2e3f230e26620
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_69b16e27fcd68ded51e2e3f230e26620_add({"features": [{"geometry": {"coordinates": [[[56.29287702860367, 57.99784950545674], [56.29128124565588, 57.9979489978972], [56.2875264622476, 57.9978329233565], [56.28780807100338, 57.99464901781309], [56.28374038897769, 57.994781686196234], [56.28370909911604, 57.99413492318533], [56.284272316627664, 57.9931067117887], [56.28568036040565, 57.99247650311469], [56.286994534598676, 57.992012131732196], [56.28952902601276, 57.99109995677651], [56.29203221495126, 57.99032044285164], [56.29462927347578, 57.98904333018021], [56.30213884029121, 57.993488149140546], [56.29287702860367, 57.99784950545674]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8b0834b344220a59767b1238f14d71cc = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_9dd84301e66ac04715053a63141fab34 = $(`<div id="html_9dd84301e66ac04715053a63141fab34" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 82,694.0р.</div>`)[0];
+                popup_8b0834b344220a59767b1238f14d71cc.setContent(html_9dd84301e66ac04715053a63141fab34);
+            
+        
+
+        geo_json_69b16e27fcd68ded51e2e3f230e26620.bindPopup(popup_8b0834b344220a59767b1238f14d71cc)
+        ;
+
+        
+    
+    
+        function geo_json_bb71c0ad4e20e86f7a372737bd80f61e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_bb71c0ad4e20e86f7a372737bd80f61e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_bb71c0ad4e20e86f7a372737bd80f61e = L.geoJson(null, {
+                onEachFeature: geo_json_bb71c0ad4e20e86f7a372737bd80f61e_onEachFeature,
+            
+                style: geo_json_bb71c0ad4e20e86f7a372737bd80f61e_styler,
+        });
+
+        function geo_json_bb71c0ad4e20e86f7a372737bd80f61e_add (data) {
+            geo_json_bb71c0ad4e20e86f7a372737bd80f61e
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_bb71c0ad4e20e86f7a372737bd80f61e_add({"features": [{"geometry": {"coordinates": [[[56.21376707446257, 57.969866948080806], [56.21936165354378, 57.96681438615955], [56.228016284623536, 57.96664356441629], [56.23787692557509, 57.966311078007486], [56.24468376158106, 57.965887591972944], [56.24661615661867, 57.97519862023418], [56.2438654838154, 57.97523067833225], [56.237595040668936, 57.973353232034384], [56.231942648361326, 57.9716402420388], [56.22991072242786, 57.97356397646894], [56.22913234398666, 57.973911669658804], [56.22435806949676, 57.97612390424024], [56.216960646102734, 57.97161482629002], [56.21373399656301, 57.96994625486414], [56.21376707446257, 57.969866948080806]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_53137c6a912299031349d22fa3d4315f = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_64e9542746581f279e7e59fe84365bef = $(`<div id="html_64e9542746581f279e7e59fe84365bef" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 91,142.0р.</div>`)[0];
+                popup_53137c6a912299031349d22fa3d4315f.setContent(html_64e9542746581f279e7e59fe84365bef);
+            
+        
+
+        geo_json_bb71c0ad4e20e86f7a372737bd80f61e.bindPopup(popup_53137c6a912299031349d22fa3d4315f)
+        ;
+
+        
+    
+    
+        function geo_json_43b874304b8bded3fce85263bc09064d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#41BAC2", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_43b874304b8bded3fce85263bc09064d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_43b874304b8bded3fce85263bc09064d = L.geoJson(null, {
+                onEachFeature: geo_json_43b874304b8bded3fce85263bc09064d_onEachFeature,
+            
+                style: geo_json_43b874304b8bded3fce85263bc09064d_styler,
+        });
+
+        function geo_json_43b874304b8bded3fce85263bc09064d_add (data) {
+            geo_json_43b874304b8bded3fce85263bc09064d
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_43b874304b8bded3fce85263bc09064d_add({"features": [{"geometry": {"coordinates": [[[56.21334844220493, 57.97007558727543], [56.21141063442218, 57.966793949622], [56.21073159066978, 57.96523317010184], [56.210957938586546, 57.96223148003256], [56.21435315734868, 57.95995002750084], [56.22725498864861, 57.956227345934764], [56.24196760328695, 57.95544673466], [56.24464079253093, 57.96589131155534], [56.237703324241146, 57.966306889726894], [56.22988028796239, 57.96650567325693], [56.21929682944643, 57.96675722625146], [56.21334844220493, 57.97007558727543]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6c57ec636c5d66c955ce4b162ed930aa = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_314e50de9af39c530c6157414920c5a5 = $(`<div id="html_314e50de9af39c530c6157414920c5a5" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 75,706.0р.</div>`)[0];
+                popup_6c57ec636c5d66c955ce4b162ed930aa.setContent(html_314e50de9af39c530c6157414920c5a5);
+            
+        
+
+        geo_json_43b874304b8bded3fce85263bc09064d.bindPopup(popup_6c57ec636c5d66c955ce4b162ed930aa)
+        ;
+
+        
+    
+    
+        function geo_json_1f260fae5037082a9ce4acc9f7330de2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_1f260fae5037082a9ce4acc9f7330de2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1f260fae5037082a9ce4acc9f7330de2 = L.geoJson(null, {
+                onEachFeature: geo_json_1f260fae5037082a9ce4acc9f7330de2_onEachFeature,
+            
+                style: geo_json_1f260fae5037082a9ce4acc9f7330de2_styler,
+        });
+
+        function geo_json_1f260fae5037082a9ce4acc9f7330de2_add (data) {
+            geo_json_1f260fae5037082a9ce4acc9f7330de2
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_1f260fae5037082a9ce4acc9f7330de2_add({"features": [{"geometry": {"coordinates": [[[56.21607383496243, 58.00130613475369], [56.21622038773057, 58.00078840899687], [56.2189560394101, 57.99990825802715], [56.22442734276913, 57.998743319061106], [56.22729030522766, 57.9984996216865], [56.22903282303554, 57.99851450031181], [56.23077534084342, 57.997994582940635], [56.23179477612137, 57.99703697446569], [56.23240928518156, 57.99598739633747], [56.242242318871604, 57.99878026186872], [56.23899772566392, 58.00152033998614], [56.23737283732294, 58.00490412193352], [56.21607383496243, 58.00130613475369]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f29cc8afe62bc792db74c91cdb45d1f3 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_ca4b8e8c0a36c2787834f8584bd5d198 = $(`<div id="html_ca4b8e8c0a36c2787834f8584bd5d198" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 103,869.0р.</div>`)[0];
+                popup_f29cc8afe62bc792db74c91cdb45d1f3.setContent(html_ca4b8e8c0a36c2787834f8584bd5d198);
+            
+        
+
+        geo_json_1f260fae5037082a9ce4acc9f7330de2.bindPopup(popup_f29cc8afe62bc792db74c91cdb45d1f3)
+        ;
+
+        
+    
+    
+        function geo_json_41e19be2809aafd4df5d92972711ba5d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_41e19be2809aafd4df5d92972711ba5d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_41e19be2809aafd4df5d92972711ba5d = L.geoJson(null, {
+                onEachFeature: geo_json_41e19be2809aafd4df5d92972711ba5d_onEachFeature,
+            
+                style: geo_json_41e19be2809aafd4df5d92972711ba5d_styler,
+        });
+
+        function geo_json_41e19be2809aafd4df5d92972711ba5d_add (data) {
+            geo_json_41e19be2809aafd4df5d92972711ba5d
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_41e19be2809aafd4df5d92972711ba5d_add({"features": [{"geometry": {"coordinates": [[[56.24223575767442, 57.99878095775313], [56.232443583606795, 57.995960984590084], [56.23674059326791, 57.99087546825916], [56.237560408287436, 57.987919114966985], [56.240033185430946, 57.985795316206406], [56.24272895390496, 57.98542791531153], [56.24547589726933, 57.985378382942656], [56.24882553716111, 57.98547098055616], [56.248334099370226, 57.9931846742532], [56.24767883928885, 57.99383584967589], [56.24223575767442, 57.99878095775313]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c8e7b8ad7b4804b0e13a6e47d603baa2 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_5b6c2b6a04b11607b8f106e9ae76ce7a = $(`<div id="html_5b6c2b6a04b11607b8f106e9ae76ce7a" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 99,425.0р.</div>`)[0];
+                popup_c8e7b8ad7b4804b0e13a6e47d603baa2.setContent(html_5b6c2b6a04b11607b8f106e9ae76ce7a);
+            
+        
+
+        geo_json_41e19be2809aafd4df5d92972711ba5d.bindPopup(popup_c8e7b8ad7b4804b0e13a6e47d603baa2)
+        ;
+
+        
+    
+    
+        function geo_json_e356e6bbfde959f1662a5f4a7e77fb70_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_e356e6bbfde959f1662a5f4a7e77fb70_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e356e6bbfde959f1662a5f4a7e77fb70 = L.geoJson(null, {
+                onEachFeature: geo_json_e356e6bbfde959f1662a5f4a7e77fb70_onEachFeature,
+            
+                style: geo_json_e356e6bbfde959f1662a5f4a7e77fb70_styler,
+        });
+
+        function geo_json_e356e6bbfde959f1662a5f4a7e77fb70_add (data) {
+            geo_json_e356e6bbfde959f1662a5f4a7e77fb70
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_e356e6bbfde959f1662a5f4a7e77fb70_add({"features": [{"geometry": {"coordinates": [[[56.247687273297544, 57.99388077661027], [56.24831376328811, 57.993121806611725], [56.24876125613892, 57.98543632941093], [56.257621614583144, 57.98553122189949], [56.256995124591015, 57.992291664758085], [56.25404167177629, 57.995351235208716], [56.247687273297544, 57.99388077661027]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_112909fd02d76974abcebabd663d48c6 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_ada6f0fbaaeeba7b4140f54b6e9fdf4e = $(`<div id="html_ada6f0fbaaeeba7b4140f54b6e9fdf4e" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 97,098.0р.</div>`)[0];
+                popup_112909fd02d76974abcebabd663d48c6.setContent(html_ada6f0fbaaeeba7b4140f54b6e9fdf4e);
+            
+        
+
+        geo_json_e356e6bbfde959f1662a5f4a7e77fb70.bindPopup(popup_112909fd02d76974abcebabd663d48c6)
+        ;
+
+        
+    
+    
+        function geo_json_b3fb969f831f5ae77e73d9d05674d917_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_b3fb969f831f5ae77e73d9d05674d917_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b3fb969f831f5ae77e73d9d05674d917 = L.geoJson(null, {
+                onEachFeature: geo_json_b3fb969f831f5ae77e73d9d05674d917_onEachFeature,
+            
+                style: geo_json_b3fb969f831f5ae77e73d9d05674d917_styler,
+        });
+
+        function geo_json_b3fb969f831f5ae77e73d9d05674d917_add (data) {
+            geo_json_b3fb969f831f5ae77e73d9d05674d917
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_b3fb969f831f5ae77e73d9d05674d917_add({"features": [{"geometry": {"coordinates": [[[56.25735404012775, 57.992362350543175], [56.26182997306228, 57.99732465728749], [56.25461367302569, 58.00477892796073], [56.24716900906313, 58.00260089248664], [56.25721702284298, 57.992071851852955], [56.25735404012775, 57.992362350543175]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ec5bbb33f701a531278f10a3651ffa71 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_0e808232c6ffe3c22cd09ff91a9a76ef = $(`<div id="html_0e808232c6ffe3c22cd09ff91a9a76ef" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 100,406.0р.</div>`)[0];
+                popup_ec5bbb33f701a531278f10a3651ffa71.setContent(html_0e808232c6ffe3c22cd09ff91a9a76ef);
+            
+        
+
+        geo_json_b3fb969f831f5ae77e73d9d05674d917.bindPopup(popup_ec5bbb33f701a531278f10a3651ffa71)
+        ;
+
+        
+    
+    
+        function geo_json_37d4a2df4733889f6555c74c2204e98d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#D8175C", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_37d4a2df4733889f6555c74c2204e98d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_37d4a2df4733889f6555c74c2204e98d = L.geoJson(null, {
+                onEachFeature: geo_json_37d4a2df4733889f6555c74c2204e98d_onEachFeature,
+            
+                style: geo_json_37d4a2df4733889f6555c74c2204e98d_styler,
+        });
+
+        function geo_json_37d4a2df4733889f6555c74c2204e98d_add (data) {
+            geo_json_37d4a2df4733889f6555c74c2204e98d
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_37d4a2df4733889f6555c74c2204e98d_add({"features": [{"geometry": {"coordinates": [[[56.257179151983536, 58.01028613991255], [56.25111026280965, 58.00863348166814], [56.25462681541549, 58.004817051968104], [56.26097929754047, 58.00636470833689], [56.257179151983536, 58.01028613991255]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_518920033371aeef68add9f33fd09fad = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_921947ab7a550b6fa8f63b25ed4a2752 = $(`<div id="html_921947ab7a550b6fa8f63b25ed4a2752" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 154,521.0р.</div>`)[0];
+                popup_518920033371aeef68add9f33fd09fad.setContent(html_921947ab7a550b6fa8f63b25ed4a2752);
+            
+        
+
+        geo_json_37d4a2df4733889f6555c74c2204e98d.bindPopup(popup_518920033371aeef68add9f33fd09fad)
+        ;
+
+        
+    
+    
+        function geo_json_8aee422c19629c18aa2b731e0872da48_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_8aee422c19629c18aa2b731e0872da48_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8aee422c19629c18aa2b731e0872da48 = L.geoJson(null, {
+                onEachFeature: geo_json_8aee422c19629c18aa2b731e0872da48_onEachFeature,
+            
+                style: geo_json_8aee422c19629c18aa2b731e0872da48_styler,
+        });
+
+        function geo_json_8aee422c19629c18aa2b731e0872da48_add (data) {
+            geo_json_8aee422c19629c18aa2b731e0872da48
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_8aee422c19629c18aa2b731e0872da48_add({"features": [{"geometry": {"coordinates": [[[56.254434821866255, 58.013165109889286], [56.25715155575324, 58.01030788272027], [56.26043860250155, 58.01120520899465], [56.261193242115866, 58.01141459887182], [56.262419959338416, 58.011728803411074], [56.263161025389536, 58.011935584439584], [56.26334428406352, 58.0119999934403], [56.26356476949243, 58.012080519630075], [56.263696542217076, 58.01213859668965], [56.2618862410927, 58.01426365528758], [56.26356109043115, 58.014806397383836], [56.26383694796996, 58.01562049509266], [56.26360049865076, 58.0157248652539], [56.254434821866255, 58.013165109889286]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a34aba095431c1f8f7bad7e9b159bd1b = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_22d5f4715c8642523a6650bc03da1012 = $(`<div id="html_22d5f4715c8642523a6650bc03da1012" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_a34aba095431c1f8f7bad7e9b159bd1b.setContent(html_22d5f4715c8642523a6650bc03da1012);
+            
+        
+
+        geo_json_8aee422c19629c18aa2b731e0872da48.bindPopup(popup_a34aba095431c1f8f7bad7e9b159bd1b)
+        ;
+
+        
+    
+    
+        function geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#249AB4", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d = L.geoJson(null, {
+                onEachFeature: geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d_onEachFeature,
+            
+                style: geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d_styler,
+        });
+
+        function geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d_add (data) {
+            geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d_add({"features": [{"geometry": {"coordinates": [[[56.299567469485766, 58.00110797743133], [56.301881930771714, 57.99844170496516], [56.30570582333121, 57.99954378832584], [56.30325719037691, 58.00203223887158], [56.299567469485766, 58.00110797743133]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ed2840beff702297f4414f06af24e1a7 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_92a7cef83db3977232cdc99de5c26a2d = $(`<div id="html_92a7cef83db3977232cdc99de5c26a2d" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 66,102.0р.</div>`)[0];
+                popup_ed2840beff702297f4414f06af24e1a7.setContent(html_92a7cef83db3977232cdc99de5c26a2d);
+            
+        
+
+        geo_json_8d8b72f6c96aa3bd6b84f0578fb5098d.bindPopup(popup_ed2840beff702297f4414f06af24e1a7)
+        ;
+
+        
+    
+    
+        function geo_json_05e20e80e83723aa8c422904de24411b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_05e20e80e83723aa8c422904de24411b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_05e20e80e83723aa8c422904de24411b = L.geoJson(null, {
+                onEachFeature: geo_json_05e20e80e83723aa8c422904de24411b_onEachFeature,
+            
+                style: geo_json_05e20e80e83723aa8c422904de24411b_styler,
+        });
+
+        function geo_json_05e20e80e83723aa8c422904de24411b_add (data) {
+            geo_json_05e20e80e83723aa8c422904de24411b
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_05e20e80e83723aa8c422904de24411b_add({"features": [{"geometry": {"coordinates": [[[56.30188709730359, 57.998434669367384], [56.30489978562497, 57.9950390258513], [56.31073421723377, 57.998682021543516], [56.30820949955606, 58.00023355530678], [56.30188709730359, 57.998434669367384]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_edd0d391e2d578a47d7b2a2cfa639882 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_ebaebdbab3f7981da2e121af805e6d4f = $(`<div id="html_ebaebdbab3f7981da2e121af805e6d4f" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 101,376.0р.</div>`)[0];
+                popup_edd0d391e2d578a47d7b2a2cfa639882.setContent(html_ebaebdbab3f7981da2e121af805e6d4f);
+            
+        
+
+        geo_json_05e20e80e83723aa8c422904de24411b.bindPopup(popup_edd0d391e2d578a47d7b2a2cfa639882)
+        ;
+
+        
+    
+    
+        function geo_json_fae5de54a8f2edcbcc6780a187f52838_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_fae5de54a8f2edcbcc6780a187f52838_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fae5de54a8f2edcbcc6780a187f52838 = L.geoJson(null, {
+                onEachFeature: geo_json_fae5de54a8f2edcbcc6780a187f52838_onEachFeature,
+            
+                style: geo_json_fae5de54a8f2edcbcc6780a187f52838_styler,
+        });
+
+        function geo_json_fae5de54a8f2edcbcc6780a187f52838_add (data) {
+            geo_json_fae5de54a8f2edcbcc6780a187f52838
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_fae5de54a8f2edcbcc6780a187f52838_add({"features": [{"geometry": {"coordinates": [[[56.303512777369804, 58.001774488304875], [56.30576452483609, 57.99954145775692], [56.30824144704826, 58.00024888327022], [56.310750537080196, 57.99870616626339], [56.31123305439493, 57.99897039323082], [56.31251976723175, 57.99972896949549], [56.313388298397655, 58.00054719104372], [56.31367780878628, 58.00142505378548], [56.31364564096438, 58.00231141762674], [56.3136295570539, 58.00306140065899], [56.3136295570539, 58.00355569906739], [56.31335613057681, 58.00426304526192], [56.3128253615308, 58.004663584499156], [56.31153864869401, 58.00482550334428], [56.31002676110916, 58.004595407924114], [56.30735683197196, 58.00520899242423], [56.30402746250539, 58.0019534656403], [56.303512777369804, 58.001774488304875]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1725358c156e1b9379ffd90bfba51378 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_afe908856b52e60ecca35eae55bb5613 = $(`<div id="html_afe908856b52e60ecca35eae55bb5613" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 91,350.0р.</div>`)[0];
+                popup_1725358c156e1b9379ffd90bfba51378.setContent(html_afe908856b52e60ecca35eae55bb5613);
+            
+        
+
+        geo_json_fae5de54a8f2edcbcc6780a187f52838.bindPopup(popup_1725358c156e1b9379ffd90bfba51378)
+        ;
+
+        
+    
+    
+        function geo_json_7dacb8df63de01122f637a3505bbad1d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_7dacb8df63de01122f637a3505bbad1d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7dacb8df63de01122f637a3505bbad1d = L.geoJson(null, {
+                onEachFeature: geo_json_7dacb8df63de01122f637a3505bbad1d_onEachFeature,
+            
+                style: geo_json_7dacb8df63de01122f637a3505bbad1d_styler,
+        });
+
+        function geo_json_7dacb8df63de01122f637a3505bbad1d_add (data) {
+            geo_json_7dacb8df63de01122f637a3505bbad1d
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_7dacb8df63de01122f637a3505bbad1d_add({"features": [{"geometry": {"coordinates": [[[56.331534972291564, 58.0051899433019], [56.33869133304128, 57.99882862957864], [56.34003992233508, 57.999097513118244], [56.33847820430253, 58.005536599569695], [56.331534972291564, 58.0051899433019]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ec40525ec08e87a70b23497337366bac = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_e28239a62fb015d03a9acaf4502a1dff = $(`<div id="html_e28239a62fb015d03a9acaf4502a1dff" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 102,018.0р.</div>`)[0];
+                popup_ec40525ec08e87a70b23497337366bac.setContent(html_e28239a62fb015d03a9acaf4502a1dff);
+            
+        
+
+        geo_json_7dacb8df63de01122f637a3505bbad1d.bindPopup(popup_ec40525ec08e87a70b23497337366bac)
+        ;
+
+        
+    
+    
+        function geo_json_743c494301983733004f32a80b216d81_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_743c494301983733004f32a80b216d81_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_743c494301983733004f32a80b216d81 = L.geoJson(null, {
+                onEachFeature: geo_json_743c494301983733004f32a80b216d81_onEachFeature,
+            
+                style: geo_json_743c494301983733004f32a80b216d81_styler,
+        });
+
+        function geo_json_743c494301983733004f32a80b216d81_add (data) {
+            geo_json_743c494301983733004f32a80b216d81
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_743c494301983733004f32a80b216d81_add({"features": [{"geometry": {"coordinates": [[[56.323954478350714, 58.008096170152896], [56.32281229477499, 58.007955850294906], [56.322150159370295, 58.00812248006525], [56.32107418933606, 58.008148789958], [56.320263073464446, 58.00757873795027], [56.31994855914655, 58.006473688200316], [56.31955127790329, 58.00503531837501], [56.320776228403304, 58.00467571688762], [56.322381906761564, 58.0047897372626], [56.32546083639846, 58.004965152514984], [56.327513456155174, 58.00503531837501], [56.323954478350714, 58.008096170152896]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_cdfe6ae641be668c1bd2ccce355f8898 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_2ee7d73beff45cf2eef51d497f3e09f0 = $(`<div id="html_2ee7d73beff45cf2eef51d497f3e09f0" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 94,675.0р.</div>`)[0];
+                popup_cdfe6ae641be668c1bd2ccce355f8898.setContent(html_2ee7d73beff45cf2eef51d497f3e09f0);
+            
+        
+
+        geo_json_743c494301983733004f32a80b216d81.bindPopup(popup_cdfe6ae641be668c1bd2ccce355f8898)
+        ;
+
+        
+    
+    
+        function geo_json_2dc5d3e2132f5a313370c49e4de668db_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_2dc5d3e2132f5a313370c49e4de668db_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2dc5d3e2132f5a313370c49e4de668db = L.geoJson(null, {
+                onEachFeature: geo_json_2dc5d3e2132f5a313370c49e4de668db_onEachFeature,
+            
+                style: geo_json_2dc5d3e2132f5a313370c49e4de668db_styler,
+        });
+
+        function geo_json_2dc5d3e2132f5a313370c49e4de668db_add (data) {
+            geo_json_2dc5d3e2132f5a313370c49e4de668db
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_2dc5d3e2132f5a313370c49e4de668db_add({"features": [{"geometry": {"coordinates": [[[56.2880181023923, 58.11721073508414], [56.278370931076324, 58.11715474081231], [56.27769951622369, 58.1150642250532], [56.27777019147118, 58.11321625634727], [56.27925437167383, 58.11108817369805], [56.28126861623406, 58.109538700267535], [56.28724848682049, 58.109300211032746], [56.290229474679165, 58.10936699115081], [56.28997820163892, 58.11523757349997], [56.290211094883006, 58.11577182478155], [56.29257791407622, 58.11722133986882], [56.2880181023923, 58.11721073508414]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3027ac2bb280fa8e0b7c87c7ec17bc5f = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_a46a0a85eed3e3454ea3f7aad5e82604 = $(`<div id="html_a46a0a85eed3e3454ea3f7aad5e82604" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_3027ac2bb280fa8e0b7c87c7ec17bc5f.setContent(html_a46a0a85eed3e3454ea3f7aad5e82604);
+            
+        
+
+        geo_json_2dc5d3e2132f5a313370c49e4de668db.bindPopup(popup_3027ac2bb280fa8e0b7c87c7ec17bc5f)
+        ;
+
+        
+    
+    
+        function geo_json_5a4300a349032abad35f04a0841b03d0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_5a4300a349032abad35f04a0841b03d0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5a4300a349032abad35f04a0841b03d0 = L.geoJson(null, {
+                onEachFeature: geo_json_5a4300a349032abad35f04a0841b03d0_onEachFeature,
+            
+                style: geo_json_5a4300a349032abad35f04a0841b03d0_styler,
+        });
+
+        function geo_json_5a4300a349032abad35f04a0841b03d0_add (data) {
+            geo_json_5a4300a349032abad35f04a0841b03d0
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_5a4300a349032abad35f04a0841b03d0_add({"features": [{"geometry": {"coordinates": [[[56.300443004502, 58.10756456760919], [56.29686583166858, 58.10761430216107], [56.29680307425065, 58.104654975586385], [56.29672463135802, 58.10307159003938], [56.2937436539961, 58.10314620124183], [56.293602449805775, 58.101537880731655], [56.291092619820574, 58.102598553855586], [56.28944523759529, 58.101471061722066], [56.29041797757657, 58.10082439573614], [56.290025743712306, 58.09946470080084], [56.29021402108097, 58.099124767062364], [56.2897276510908, 58.098817996528624], [56.2897276510908, 58.09706852494591], [56.2926144923247, 58.09583306440757], [56.29473255518667, 58.0961315688609], [56.298184213184214, 58.095667227520636], [56.29871765123883, 58.09569210310306], [56.309675788516984, 58.103024126461094], [56.30988245233334, 58.10335172442444], [56.30949811910543, 58.10443489529618], [56.30382689573361, 58.10664413482337], [56.30214514406788, 58.10750518039464], [56.300443004502, 58.10756456760919]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_72b078374123586e8b212d8d56f711f9 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_a9ac1227714a8d62223a7fb18cbad1e8 = $(`<div id="html_a9ac1227714a8d62223a7fb18cbad1e8" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_72b078374123586e8b212d8d56f711f9.setContent(html_a9ac1227714a8d62223a7fb18cbad1e8);
+            
+        
+
+        geo_json_5a4300a349032abad35f04a0841b03d0.bindPopup(popup_72b078374123586e8b212d8d56f711f9)
+        ;
+
+        
+    
+    
+        function geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#79D5C3", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0 = L.geoJson(null, {
+                onEachFeature: geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0_onEachFeature,
+            
+                style: geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0_styler,
+        });
+
+        function geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0_add (data) {
+            geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0_add({"features": [{"geometry": {"coordinates": [[[56.22692798130137, 57.97493622289889], [56.22993516203948, 57.9735811891976], [56.23192235962424, 57.9716987686551], [56.243674126355685, 57.97523621697317], [56.24368177103162, 57.97629861641687], [56.24242559659747, 57.976789631454366], [56.24082487146248, 57.97685433973544], [56.238585291899994, 57.97734915444491], [56.23687688667849, 57.978331155194326], [56.23472344479126, 57.97924461628901], [56.234091768504356, 57.98050058727151], [56.23351751733529, 57.98143682790729], [56.232770990813805, 57.98241110112883], [56.23167991359145, 57.98282972601598], [56.230761111719545, 57.98285255996001], [56.23040220473851, 57.98203052880501], [56.23153635079845, 57.980112382759586], [56.22962696179931, 57.978240109999376], [56.22942597388948, 57.97696883465821], [56.22692798130137, 57.97493622289889]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_77fddd4f8e9c5c34e806ef7a253ede96 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_1cbdf50ed0860933ca6270676900c4ae = $(`<div id="html_1cbdf50ed0860933ca6270676900c4ae" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 85,159.0р.</div>`)[0];
+                popup_77fddd4f8e9c5c34e806ef7a253ede96.setContent(html_1cbdf50ed0860933ca6270676900c4ae);
+            
+        
+
+        geo_json_2ab6ea8aab9fd1ed2a3fb2c9b55240d0.bindPopup(popup_77fddd4f8e9c5c34e806ef7a253ede96)
+        ;
+
+        
+    
+    
+        function geo_json_076c98944aa00a66aa54b9e43e0c143e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FF5E7B", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_076c98944aa00a66aa54b9e43e0c143e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_076c98944aa00a66aa54b9e43e0c143e = L.geoJson(null, {
+                onEachFeature: geo_json_076c98944aa00a66aa54b9e43e0c143e_onEachFeature,
+            
+                style: geo_json_076c98944aa00a66aa54b9e43e0c143e_styler,
+        });
+
+        function geo_json_076c98944aa00a66aa54b9e43e0c143e_add (data) {
+            geo_json_076c98944aa00a66aa54b9e43e0c143e
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_076c98944aa00a66aa54b9e43e0c143e_add({"features": [{"geometry": {"coordinates": [[[56.22341675961155, 58.01504239788554], [56.209269120262576, 58.01256806068014], [56.21276402404459, 58.00681768109499], [56.2268108488617, 58.009239006165586], [56.22341675961155, 58.01504239788554]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_09b3d20f6c0bbe165cdd2635fbd2aec9 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_969ed8b8ef00264b188d0dfc4fda8290 = $(`<div id="html_969ed8b8ef00264b188d0dfc4fda8290" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 123,012.0р.</div>`)[0];
+                popup_09b3d20f6c0bbe165cdd2635fbd2aec9.setContent(html_969ed8b8ef00264b188d0dfc4fda8290);
+            
+        
+
+        geo_json_076c98944aa00a66aa54b9e43e0c143e.bindPopup(popup_09b3d20f6c0bbe165cdd2635fbd2aec9)
+        ;
+
+        
+    
+    
+        function geo_json_6799ef88f224cc6bad78cdd6a3ff1384_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_6799ef88f224cc6bad78cdd6a3ff1384_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6799ef88f224cc6bad78cdd6a3ff1384 = L.geoJson(null, {
+                onEachFeature: geo_json_6799ef88f224cc6bad78cdd6a3ff1384_onEachFeature,
+            
+                style: geo_json_6799ef88f224cc6bad78cdd6a3ff1384_styler,
+        });
+
+        function geo_json_6799ef88f224cc6bad78cdd6a3ff1384_add (data) {
+            geo_json_6799ef88f224cc6bad78cdd6a3ff1384
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_6799ef88f224cc6bad78cdd6a3ff1384_add({"features": [{"geometry": {"coordinates": [[[56.20913418967322, 58.01256451816616], [56.19812181202744, 58.01062426508051], [56.196573196420644, 58.01018150802449], [56.195589948416284, 58.00959549761592], [56.195221230414234, 58.009295977478956], [56.19310724720674, 58.00688670260132], [56.192984341204976, 58.006639254376154], [56.19391845860247, 58.00494614498038], [56.19610618541162, 58.0039953619677], [56.21281999202614, 58.006806467715705], [56.20913418967322, 58.01256451816616]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_318a7555d835ffc5b3f672ed00822437 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_55ca7ed18ee66750f80c93d1a7c1f620 = $(`<div id="html_55ca7ed18ee66750f80c93d1a7c1f620" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 101,096.0р.</div>`)[0];
+                popup_318a7555d835ffc5b3f672ed00822437.setContent(html_55ca7ed18ee66750f80c93d1a7c1f620);
+            
+        
+
+        geo_json_6799ef88f224cc6bad78cdd6a3ff1384.bindPopup(popup_318a7555d835ffc5b3f672ed00822437)
+        ;
+
+        
+    
+    
+        function geo_json_92cfc16d95b23a5ade58a9b89bf1d095_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FF5E7B", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_92cfc16d95b23a5ade58a9b89bf1d095_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_92cfc16d95b23a5ade58a9b89bf1d095 = L.geoJson(null, {
+                onEachFeature: geo_json_92cfc16d95b23a5ade58a9b89bf1d095_onEachFeature,
+            
+                style: geo_json_92cfc16d95b23a5ade58a9b89bf1d095_styler,
+        });
+
+        function geo_json_92cfc16d95b23a5ade58a9b89bf1d095_add (data) {
+            geo_json_92cfc16d95b23a5ade58a9b89bf1d095
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_92cfc16d95b23a5ade58a9b89bf1d095_add({"features": [{"geometry": {"coordinates": [[[56.242345947440754, 58.01782878486654], [56.24636119309034, 58.013605591177225], [56.25238133482026, 58.01529891706352], [56.248365257386155, 58.01952835196107], [56.242345947440754, 58.01782878486654]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ff15118003b1be343e1bffcdbdaa998e = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_8aff4bd0e45e3c82433e98d1b4771afe = $(`<div id="html_8aff4bd0e45e3c82433e98d1b4771afe" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 114,813.0р.</div>`)[0];
+                popup_ff15118003b1be343e1bffcdbdaa998e.setContent(html_8aff4bd0e45e3c82433e98d1b4771afe);
+            
+        
+
+        geo_json_92cfc16d95b23a5ade58a9b89bf1d095.bindPopup(popup_ff15118003b1be343e1bffcdbdaa998e)
+        ;
+
+        
+    
+    
+        function geo_json_b6b5a1544b85517a428d90c6caf6f289_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#D8175C", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_b6b5a1544b85517a428d90c6caf6f289_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b6b5a1544b85517a428d90c6caf6f289 = L.geoJson(null, {
+                onEachFeature: geo_json_b6b5a1544b85517a428d90c6caf6f289_onEachFeature,
+            
+                style: geo_json_b6b5a1544b85517a428d90c6caf6f289_styler,
+        });
+
+        function geo_json_b6b5a1544b85517a428d90c6caf6f289_add (data) {
+            geo_json_b6b5a1544b85517a428d90c6caf6f289
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_b6b5a1544b85517a428d90c6caf6f289_add({"features": [{"geometry": {"coordinates": [[[56.2524737603965, 58.015293254364906], [56.2544337073584, 58.01319847843297], [56.26367841294055, 58.01576180588245], [56.2641293741882, 58.01655189846619], [56.261042024106416, 58.01685506889561], [56.2580760866679, 58.01686425583816], [56.2524737603965, 58.015293254364906]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_248b448d65c8df7107cd447967c46b22 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_edea6d6fa9625131c58ddc6f31f39ab8 = $(`<div id="html_edea6d6fa9625131c58ddc6f31f39ab8" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 134,493.0р.</div>`)[0];
+                popup_248b448d65c8df7107cd447967c46b22.setContent(html_edea6d6fa9625131c58ddc6f31f39ab8);
+            
+        
+
+        geo_json_b6b5a1544b85517a428d90c6caf6f289.bindPopup(popup_248b448d65c8df7107cd447967c46b22)
+        ;
+
+        
+    
+    
+        function geo_json_92772e0e87de5c579e71780c9a5a10ac_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_92772e0e87de5c579e71780c9a5a10ac_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_92772e0e87de5c579e71780c9a5a10ac = L.geoJson(null, {
+                onEachFeature: geo_json_92772e0e87de5c579e71780c9a5a10ac_onEachFeature,
+            
+                style: geo_json_92772e0e87de5c579e71780c9a5a10ac_styler,
+        });
+
+        function geo_json_92772e0e87de5c579e71780c9a5a10ac_add (data) {
+            geo_json_92772e0e87de5c579e71780c9a5a10ac
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_92772e0e87de5c579e71780c9a5a10ac_add({"features": [{"geometry": {"coordinates": [[[56.26548838886214, 58.022053984866034], [56.26318102872358, 58.02143101877192], [56.26370885620565, 58.02077609400098], [56.26603129712939, 58.02145497920708], [56.2671472752352, 58.0203527825866], [56.270570613480686, 58.02084797657389], [56.27081190593253, 58.02093583546994], [56.27242554995115, 58.01919464346949], [56.27533614149763, 58.01991349447508], [56.27388838611694, 58.02141504775426], [56.27304386214422, 58.0214070609355], [56.27290813507767, 58.02154283661238], [56.272757327225946, 58.02239741286789], [56.27212393424665, 58.02321203664667], [56.27164134911911, 58.02380302659975], [56.26972608939704, 58.0233238463056], [56.26586540838062, 58.02237345306392], [56.26548838886214, 58.022053984866034]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_117b053a8516183893546ac992f65413 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_76b060d6f4c4c97857cb1d19c4e1580b = $(`<div id="html_76b060d6f4c4c97857cb1d19c4e1580b" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 89,651.0р.</div>`)[0];
+                popup_117b053a8516183893546ac992f65413.setContent(html_76b060d6f4c4c97857cb1d19c4e1580b);
+            
+        
+
+        geo_json_92772e0e87de5c579e71780c9a5a10ac.bindPopup(popup_117b053a8516183893546ac992f65413)
+        ;
+
+        
+    
+    
+        function geo_json_ff7d173aea25b76447b5ee03193a6365_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_ff7d173aea25b76447b5ee03193a6365_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ff7d173aea25b76447b5ee03193a6365 = L.geoJson(null, {
+                onEachFeature: geo_json_ff7d173aea25b76447b5ee03193a6365_onEachFeature,
+            
+                style: geo_json_ff7d173aea25b76447b5ee03193a6365_styler,
+        });
+
+        function geo_json_ff7d173aea25b76447b5ee03193a6365_add (data) {
+            geo_json_ff7d173aea25b76447b5ee03193a6365
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_ff7d173aea25b76447b5ee03193a6365_add({"features": [{"geometry": {"coordinates": [[[56.27689059471939, 58.019732313214774], [56.2722339959528, 58.01851756691241], [56.27501507085097, 58.01512465039258], [56.2760460075894, 58.01381402855881], [56.27810230519992, 58.011834121220005], [56.27980163265785, 58.011771062999216], [56.281550318611544, 58.0147010115593], [56.27689059471939, 58.019732313214774]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3618277a530cc14e2cadeec3c9e7d024 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_a1c2fad49bc75432895b8d7ed62c0d89 = $(`<div id="html_a1c2fad49bc75432895b8d7ed62c0d89" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_3618277a530cc14e2cadeec3c9e7d024.setContent(html_a1c2fad49bc75432895b8d7ed62c0d89);
+            
+        
+
+        geo_json_ff7d173aea25b76447b5ee03193a6365.bindPopup(popup_3618277a530cc14e2cadeec3c9e7d024)
+        ;
+
+        
+    
+    
+        function geo_json_13aaf07e08c7258212685f6dce8abc47_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_13aaf07e08c7258212685f6dce8abc47_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_13aaf07e08c7258212685f6dce8abc47 = L.geoJson(null, {
+                onEachFeature: geo_json_13aaf07e08c7258212685f6dce8abc47_onEachFeature,
+            
+                style: geo_json_13aaf07e08c7258212685f6dce8abc47_styler,
+        });
+
+        function geo_json_13aaf07e08c7258212685f6dce8abc47_add (data) {
+            geo_json_13aaf07e08c7258212685f6dce8abc47
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_13aaf07e08c7258212685f6dce8abc47_add({"features": [{"geometry": {"coordinates": [[[56.28449890382612, 58.021841877677645], [56.27693425524734, 58.01980273207977], [56.28166782277057, 58.014536400791485], [56.28925511999779, 58.01644388594096], [56.28449890382612, 58.021841877677645]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_80a5e1cfeed5a61bda85ecb514175151 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_8afbd9a577d2b4a06d8e42ee42707e95 = $(`<div id="html_8afbd9a577d2b4a06d8e42ee42707e95" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 90,211.0р.</div>`)[0];
+                popup_80a5e1cfeed5a61bda85ecb514175151.setContent(html_8afbd9a577d2b4a06d8e42ee42707e95);
+            
+        
+
+        geo_json_13aaf07e08c7258212685f6dce8abc47.bindPopup(popup_80a5e1cfeed5a61bda85ecb514175151)
+        ;
+
+        
+    
+    
+        function geo_json_3bc45d1ba9a5c62edc033ec169ea805e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#D8175C", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_3bc45d1ba9a5c62edc033ec169ea805e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3bc45d1ba9a5c62edc033ec169ea805e = L.geoJson(null, {
+                onEachFeature: geo_json_3bc45d1ba9a5c62edc033ec169ea805e_onEachFeature,
+            
+                style: geo_json_3bc45d1ba9a5c62edc033ec169ea805e_styler,
+        });
+
+        function geo_json_3bc45d1ba9a5c62edc033ec169ea805e_add (data) {
+            geo_json_3bc45d1ba9a5c62edc033ec169ea805e
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_3bc45d1ba9a5c62edc033ec169ea805e_add({"features": [{"geometry": {"coordinates": [[[56.2546808159845, 58.00480656451808], [56.25869614642136, 58.00052233181586], [56.26855692388665, 58.00289609165364], [56.265251787950234, 58.006253824566045], [56.26093599061079, 58.006326186032425], [56.2546808159845, 58.00480656451808]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_033cbff1a97ebb59b6d8bc240eaf003c = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_a7be46645f0ef1b9dccd47f1b11037fd = $(`<div id="html_a7be46645f0ef1b9dccd47f1b11037fd" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 135,414.0р.</div>`)[0];
+                popup_033cbff1a97ebb59b6d8bc240eaf003c.setContent(html_a7be46645f0ef1b9dccd47f1b11037fd);
+            
+        
+
+        geo_json_3bc45d1ba9a5c62edc033ec169ea805e.bindPopup(popup_033cbff1a97ebb59b6d8bc240eaf003c)
+        ;
+
+        
+    
+    
+        function geo_json_df43b95cdd728915a6480735bb792b70_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#D8175C", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_df43b95cdd728915a6480735bb792b70_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_df43b95cdd728915a6480735bb792b70 = L.geoJson(null, {
+                onEachFeature: geo_json_df43b95cdd728915a6480735bb792b70_onEachFeature,
+            
+                style: geo_json_df43b95cdd728915a6480735bb792b70_styler,
+        });
+
+        function geo_json_df43b95cdd728915a6480735bb792b70_add (data) {
+            geo_json_df43b95cdd728915a6480735bb792b70
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_df43b95cdd728915a6480735bb792b70_add({"features": [{"geometry": {"coordinates": [[[56.26855692388665, 58.00289609165364], [56.258723461594286, 58.00052233181586], [56.261837391320114, 57.99741015213499], [56.262846875378415, 57.997582326863125], [56.26348818704855, 57.99693091041968], [56.27099687785355, 57.998616072109996], [56.272787206266486, 57.99905505078925], [56.27292081286407, 57.99942322230589], [56.271932124040205, 57.99974890933774], [56.26855692388665, 58.00289609165364]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6fad64591e8352d4611805f02ef547a1 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_76669121be560ebf67a3e4f926f05cb9 = $(`<div id="html_76669121be560ebf67a3e4f926f05cb9" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 135,986.0р.</div>`)[0];
+                popup_6fad64591e8352d4611805f02ef547a1.setContent(html_76669121be560ebf67a3e4f926f05cb9);
+            
+        
+
+        geo_json_df43b95cdd728915a6480735bb792b70.bindPopup(popup_6fad64591e8352d4611805f02ef547a1)
+        ;
+
+        
+    
+    
+        function geo_json_01a9dc04a390a84c42568cd62d5a0835_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FD9A98", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_01a9dc04a390a84c42568cd62d5a0835_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_01a9dc04a390a84c42568cd62d5a0835 = L.geoJson(null, {
+                onEachFeature: geo_json_01a9dc04a390a84c42568cd62d5a0835_onEachFeature,
+            
+                style: geo_json_01a9dc04a390a84c42568cd62d5a0835_styler,
+        });
+
+        function geo_json_01a9dc04a390a84c42568cd62d5a0835_add (data) {
+            geo_json_01a9dc04a390a84c42568cd62d5a0835
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_01a9dc04a390a84c42568cd62d5a0835_add({"features": [{"geometry": {"coordinates": [[[56.257307697403206, 57.99101351100464], [56.2589374845939, 57.990519404457075], [56.2597191461484, 57.99049454481647], [56.2597191461484, 57.99012164814005], [56.26181399911238, 57.99012993477501], [56.26190779718621, 57.98983161725508], [56.26433094800174, 57.98930955115824], [56.26494064401393, 57.988903494488255], [56.26716056282717, 57.98887034680189], [56.26861445331696, 57.98941727970609], [56.27139717577268, 57.99058569996032], [56.27103761145801, 57.99193637864968], [56.275520590180435, 57.99801786890609], [56.27340734001771, 57.99911809521157], [56.269240179653366, 57.998249979769724], [56.262814489529774, 57.99663494605895], [56.26172864808271, 57.99642524136644], [56.2610121699534, 57.99618654635091], [56.25967585331904, 57.99461768050449], [56.26042013093854, 57.99413355945191], [56.26123207015959, 57.993183228722216], [56.261790278373695, 57.99238529004799], [56.261874855522535, 57.991085239304], [56.257307697403206, 57.99101351100464]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6ff3eac25230e6cd9953ef2f33673a7b = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_cc0d7512fdc49f258e20b03fcb0f0e09 = $(`<div id="html_cc0d7512fdc49f258e20b03fcb0f0e09" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 113,196.0р.</div>`)[0];
+                popup_6ff3eac25230e6cd9953ef2f33673a7b.setContent(html_cc0d7512fdc49f258e20b03fcb0f0e09);
+            
+        
+
+        geo_json_01a9dc04a390a84c42568cd62d5a0835.bindPopup(popup_6ff3eac25230e6cd9953ef2f33673a7b)
+        ;
+
+        
+    
+    
+        function geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1 = L.geoJson(null, {
+                onEachFeature: geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1_onEachFeature,
+            
+                style: geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1_styler,
+        });
+
+        function geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1_add (data) {
+            geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1_add({"features": [{"geometry": {"coordinates": [[[56.27379531682388, 57.99022738150555], [56.27260168704797, 57.989977058204744], [56.2689765351208, 57.98878631848217], [56.26719494031357, 57.98883559373118], [56.26493309338386, 57.988876654324315], [56.26431340929449, 57.98928725766467], [56.261850165035014, 57.98982103497045], [56.261726228217356, 57.99008381472194], [56.25965028651521, 57.9900920265581], [56.25965028651521, 57.99046976898646], [56.25904609452698, 57.990486192479864], [56.25718704225676, 57.99104458677681], [56.257727020774865, 57.98556936472869], [56.269008257226915, 57.985800945545265], [56.270340578021006, 57.98596520154973], [56.27599519534371, 57.98670434424923], [56.274817795572744, 57.989800365141974], [56.27379531682388, 57.99022738150555]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_279376de295fb351751b38dff441091a = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_95a21b859c46b6093098e46c0994bb45 = $(`<div id="html_95a21b859c46b6093098e46c0994bb45" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 87,785.0р.</div>`)[0];
+                popup_279376de295fb351751b38dff441091a.setContent(html_95a21b859c46b6093098e46c0994bb45);
+            
+        
+
+        geo_json_5d8e177cc1d2c3034f60c5c4f1de06f1.bindPopup(popup_279376de295fb351751b38dff441091a)
+        ;
+
+        
+    
+    
+        function geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57 = L.geoJson(null, {
+                onEachFeature: geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57_onEachFeature,
+            
+                style: geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57_styler,
+        });
+
+        function geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57_add (data) {
+            geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57_add({"features": [{"geometry": {"coordinates": [[[56.26638296189705, 58.0093404030367], [56.26937224487273, 58.00661701527528], [56.26933109317281, 58.006042863738315], [56.2754302984105, 58.00559308793714], [56.278653848245085, 58.00570937399783], [56.27866756547843, 58.00628353088419], [56.27785824871188, 58.00628353088419], [56.27798170381158, 58.00769344669206], [56.27674715281091, 58.00835477981684], [56.27854413074064, 58.00882715699316], [56.277487903774755, 58.009815487159756], [56.27629450447401, 58.010207904802826], [56.27411346437202, 58.00999716252943], [56.271952158635145, 58.00880989863765], [56.271485772701084, 58.008729958936726], [56.27129373143487, 58.008875303714774], [56.27027865616702, 58.00917325866439], [56.26963394620009, 58.00865001905726], [56.26638296189705, 58.0093404030367]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2764ee8bb39c6ee978bc9c0b34eea529 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_442406883383ec53a78c9d4ed3bd2fc3 = $(`<div id="html_442406883383ec53a78c9d4ed3bd2fc3" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 102,019.0р.</div>`)[0];
+                popup_2764ee8bb39c6ee978bc9c0b34eea529.setContent(html_442406883383ec53a78c9d4ed3bd2fc3);
+            
+        
+
+        geo_json_9fa0c1e4efc15b5eeea7e8f09f9a6b57.bindPopup(popup_2764ee8bb39c6ee978bc9c0b34eea529)
+        ;
+
+        
+    
+    
+        function geo_json_fe2cb26a6e9a32e129b25145bac162a7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_fe2cb26a6e9a32e129b25145bac162a7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fe2cb26a6e9a32e129b25145bac162a7 = L.geoJson(null, {
+                onEachFeature: geo_json_fe2cb26a6e9a32e129b25145bac162a7_onEachFeature,
+            
+                style: geo_json_fe2cb26a6e9a32e129b25145bac162a7_styler,
+        });
+
+        function geo_json_fe2cb26a6e9a32e129b25145bac162a7_add (data) {
+            geo_json_fe2cb26a6e9a32e129b25145bac162a7
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_fe2cb26a6e9a32e129b25145bac162a7_add({"features": [{"geometry": {"coordinates": [[[56.26535858792397, 58.0062586828175], [56.27200900434477, 57.99975989901259], [56.2735684753834, 57.999212610532965], [56.27513827404482, 57.99846281173453], [56.27695593565343, 57.998856868535455], [56.27829272696988, 58.001619939398665], [56.279924491367694, 58.00170202768422], [56.28057870249668, 58.00312290058011], [56.27985576890177, 58.00347860019036], [56.28035149479496, 58.00382882404571], [56.280454771023756, 58.00428848765608], [56.28032051192665, 58.00499438813617], [56.27986414014626, 58.00523762690793], [56.27793287468742, 58.005182906810205], [56.27548669957082, 58.005398064598126], [56.26535858792397, 58.0062586828175]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5ae3d87c2f68849ec2bdf29fe10abec6 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_ad5b6e0a8c04f0498ea4ed3be95f6050 = $(`<div id="html_ad5b6e0a8c04f0498ea4ed3be95f6050" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 97,177.0р.</div>`)[0];
+                popup_5ae3d87c2f68849ec2bdf29fe10abec6.setContent(html_ad5b6e0a8c04f0498ea4ed3be95f6050);
+            
+        
+
+        geo_json_fe2cb26a6e9a32e129b25145bac162a7.bindPopup(popup_5ae3d87c2f68849ec2bdf29fe10abec6)
+        ;
+
+        
+    
+    
+        function geo_json_2d2449a19eb9007d161fd1d49e5de2b9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#79D5C3", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_2d2449a19eb9007d161fd1d49e5de2b9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2d2449a19eb9007d161fd1d49e5de2b9 = L.geoJson(null, {
+                onEachFeature: geo_json_2d2449a19eb9007d161fd1d49e5de2b9_onEachFeature,
+            
+                style: geo_json_2d2449a19eb9007d161fd1d49e5de2b9_styler,
+        });
+
+        function geo_json_2d2449a19eb9007d161fd1d49e5de2b9_add (data) {
+            geo_json_2d2449a19eb9007d161fd1d49e5de2b9
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_2d2449a19eb9007d161fd1d49e5de2b9_add({"features": [{"geometry": {"coordinates": [[[56.28444659845843, 58.006268535545274], [56.2816547452953, 58.00571543994624], [56.28265010164074, 58.00485362279392], [56.28265010164074, 58.004030375092356], [56.28398533576163, 58.00325213134124], [56.283997474253624, 58.003046311982814], [56.28254085521138, 58.00300128884058], [56.2823139040415, 58.001624254374235], [56.28284799769017, 58.001424857821746], [56.28330926038694, 58.0006272605072], [56.28256881237465, 57.999855375218885], [56.28390010100881, 57.99941548211066], [56.28352380775587, 57.998752925825386], [56.284786210924835, 57.99839912861296], [56.284264255768164, 57.99800673125179], [56.280282830387904, 57.997633628133514], [56.28065595016395, 57.99532662400756], [56.28142067516015, 57.99508859258282], [56.283617742214744, 57.99490845964192], [56.28386051205595, 57.994824826182565], [56.28772055251636, 57.994689725566644], [56.28741709021526, 57.99783550765943], [56.28630035877492, 58.004369877960585], [56.28444659845843, 58.006268535545274]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0f6402371bb8ad7fd90669683c6d10f9 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_ab0e10a69ce98736b3c91f973c5a126f = $(`<div id="html_ab0e10a69ce98736b3c91f973c5a126f" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 85,480.0р.</div>`)[0];
+                popup_0f6402371bb8ad7fd90669683c6d10f9.setContent(html_ab0e10a69ce98736b3c91f973c5a126f);
+            
+        
+
+        geo_json_2d2449a19eb9007d161fd1d49e5de2b9.bindPopup(popup_0f6402371bb8ad7fd90669683c6d10f9)
+        ;
+
+        
+    
+    
+        function geo_json_e02d8571e2fd53b14a54b3411674cf05_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_e02d8571e2fd53b14a54b3411674cf05_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e02d8571e2fd53b14a54b3411674cf05 = L.geoJson(null, {
+                onEachFeature: geo_json_e02d8571e2fd53b14a54b3411674cf05_onEachFeature,
+            
+                style: geo_json_e02d8571e2fd53b14a54b3411674cf05_styler,
+        });
+
+        function geo_json_e02d8571e2fd53b14a54b3411674cf05_add (data) {
+            geo_json_e02d8571e2fd53b14a54b3411674cf05
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_e02d8571e2fd53b14a54b3411674cf05_add({"features": [{"geometry": {"coordinates": [[[56.284561235583425, 58.00633430006582], [56.286366133571164, 58.00438297799283], [56.28753405012185, 57.99787139700916], [56.29133010458992, 57.99797840333815], [56.293174287079864, 57.99812821166125], [56.29466847873337, 57.9987345722802], [56.296715766474904, 58.000162520837506], [56.29636577563849, 58.00027665360665], [56.296581154614785, 58.00149642485138], [56.29617731903241, 58.00254496691366], [56.29622958464452, 58.00309838666848], [56.29543513724113, 58.00471788823799], [56.294008251517795, 58.00582339344339], [56.293173657982834, 58.00580199689253], [56.29325442509895, 58.00517435904186], [56.29040065365396, 58.00449678309997], [56.28804494609528, 58.007256933219765], [56.284561235583425, 58.00633430006582]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2929dde489a8066201237cf2a583a407 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_109fdf52fdbbee95dff030a293225c74 = $(`<div id="html_109fdf52fdbbee95dff030a293225c74" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 88,550.0р.</div>`)[0];
+                popup_2929dde489a8066201237cf2a583a407.setContent(html_109fdf52fdbbee95dff030a293225c74);
+            
+        
+
+        geo_json_e02d8571e2fd53b14a54b3411674cf05.bindPopup(popup_2929dde489a8066201237cf2a583a407)
+        ;
+
+        
+    
+    
+        function geo_json_a8914fe000c2dced64624d25bc9c516f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FF5E7B", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_a8914fe000c2dced64624d25bc9c516f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a8914fe000c2dced64624d25bc9c516f = L.geoJson(null, {
+                onEachFeature: geo_json_a8914fe000c2dced64624d25bc9c516f_onEachFeature,
+            
+                style: geo_json_a8914fe000c2dced64624d25bc9c516f_styler,
+        });
+
+        function geo_json_a8914fe000c2dced64624d25bc9c516f_add (data) {
+            geo_json_a8914fe000c2dced64624d25bc9c516f
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_a8914fe000c2dced64624d25bc9c516f_add({"features": [{"geometry": {"coordinates": [[[56.30012250856609, 58.00759689511065], [56.29728387484093, 58.00461642690084], [56.29728387484093, 58.00413035777959], [56.29761274094332, 58.00337831330373], [56.29941285013484, 58.001158772853444], [56.303186155938334, 58.00208512671489], [56.30408621053468, 58.00250702250915], [56.30495164764551, 58.00328659948187], [56.307253710361124, 58.005634399334156], [56.30012250856609, 58.00759689511065]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_24044778582ca81cdceeba0a1f512ccf = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_f31387ebc5f173c4713d58a18a1bb026 = $(`<div id="html_f31387ebc5f173c4713d58a18a1bb026" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 118,683.0р.</div>`)[0];
+                popup_24044778582ca81cdceeba0a1f512ccf.setContent(html_f31387ebc5f173c4713d58a18a1bb026);
+            
+        
+
+        geo_json_a8914fe000c2dced64624d25bc9c516f.bindPopup(popup_24044778582ca81cdceeba0a1f512ccf)
+        ;
+
+        
+    
+    
+        function geo_json_de749441ae263be2b7eb51855a5cebb6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_de749441ae263be2b7eb51855a5cebb6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_de749441ae263be2b7eb51855a5cebb6 = L.geoJson(null, {
+                onEachFeature: geo_json_de749441ae263be2b7eb51855a5cebb6_onEachFeature,
+            
+                style: geo_json_de749441ae263be2b7eb51855a5cebb6_styler,
+        });
+
+        function geo_json_de749441ae263be2b7eb51855a5cebb6_add (data) {
+            geo_json_de749441ae263be2b7eb51855a5cebb6
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_de749441ae263be2b7eb51855a5cebb6_add({"features": [{"geometry": {"coordinates": [[[56.288174083670214, 58.01594151501098], [56.2814614582814, 58.01430044714854], [56.279783301935026, 58.01173612793238], [56.27751424549382, 58.01138144284445], [56.279365314990685, 58.009668947980344], [56.281261649800115, 58.010053268586546], [56.281019835293336, 58.01030273764826], [56.29100085785774, 58.01272317216487], [56.288174083670214, 58.01594151501098]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_45d069f6f8ed050798327ecbc9a4e7fa = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_be45e6c9d386759efb4f256095f726f0 = $(`<div id="html_be45e6c9d386759efb4f256095f726f0" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 93,870.0р.</div>`)[0];
+                popup_45d069f6f8ed050798327ecbc9a4e7fa.setContent(html_be45e6c9d386759efb4f256095f726f0);
+            
+        
+
+        geo_json_de749441ae263be2b7eb51855a5cebb6.bindPopup(popup_45d069f6f8ed050798327ecbc9a4e7fa)
+        ;
+
+        
+    
+    
+        function geo_json_1777ddec26e50c8fbed535d195995b99_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#79D5C3", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_1777ddec26e50c8fbed535d195995b99_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1777ddec26e50c8fbed535d195995b99 = L.geoJson(null, {
+                onEachFeature: geo_json_1777ddec26e50c8fbed535d195995b99_onEachFeature,
+            
+                style: geo_json_1777ddec26e50c8fbed535d195995b99_styler,
+        });
+
+        function geo_json_1777ddec26e50c8fbed535d195995b99_add (data) {
+            geo_json_1777ddec26e50c8fbed535d195995b99
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_1777ddec26e50c8fbed535d195995b99_add({"features": [{"geometry": {"coordinates": [[[56.29097867394799, 58.012731813393174], [56.28108063625436, 58.010288532919674], [56.28130757854407, 58.01004807905264], [56.280212335323654, 58.009828532807205], [56.28111274700342, 58.0088659467898], [56.28103381055527, 58.00850525104693], [56.28129035401304, 58.00816023432611], [56.28010630728713, 58.00777339344182], [56.28161596686283, 58.006273038566064], [56.282129053777, 58.00660761792426], [56.293785043411475, 58.00952965926089], [56.29097867394799, 58.012731813393174]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e3e5e05ae6e441e0039145534e7e7ade = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_e24b4d72e53eaeec6b931c28dd43b523 = $(`<div id="html_e24b4d72e53eaeec6b931c28dd43b523" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 84,703.0р.</div>`)[0];
+                popup_e3e5e05ae6e441e0039145534e7e7ade.setContent(html_e24b4d72e53eaeec6b931c28dd43b523);
+            
+        
+
+        geo_json_1777ddec26e50c8fbed535d195995b99.bindPopup(popup_e3e5e05ae6e441e0039145534e7e7ade)
+        ;
+
+        
+    
+    
+        function geo_json_0a3f66dbc3917f08227e26328dec6513_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_0a3f66dbc3917f08227e26328dec6513_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0a3f66dbc3917f08227e26328dec6513 = L.geoJson(null, {
+                onEachFeature: geo_json_0a3f66dbc3917f08227e26328dec6513_onEachFeature,
+            
+                style: geo_json_0a3f66dbc3917f08227e26328dec6513_styler,
+        });
+
+        function geo_json_0a3f66dbc3917f08227e26328dec6513_add (data) {
+            geo_json_0a3f66dbc3917f08227e26328dec6513
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_0a3f66dbc3917f08227e26328dec6513_add({"features": [{"geometry": {"coordinates": [[[56.292612337414056, 58.0170222015669], [56.28820024303903, 58.015940267580646], [56.29382550196803, 58.009566472121975], [56.30417176543014, 58.01317048646183], [56.30356320516549, 58.015386705854155], [56.303472938079636, 58.0175629332727], [56.29604649185279, 58.017846067671], [56.295088890301344, 58.017371315285914], [56.29447713099759, 58.01742396033927], [56.292612337414056, 58.0170222015669]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1b970e7f9f452e1a2ed546dc5e248273 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_75577db2410597b20e6289218ec24138 = $(`<div id="html_75577db2410597b20e6289218ec24138" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 96,782.0р.</div>`)[0];
+                popup_1b970e7f9f452e1a2ed546dc5e248273.setContent(html_75577db2410597b20e6289218ec24138);
+            
+        
+
+        geo_json_0a3f66dbc3917f08227e26328dec6513.bindPopup(popup_1b970e7f9f452e1a2ed546dc5e248273)
+        ;
+
+        
+    
+    
+        function geo_json_330939d8be43ae745a897bcf1b7050f0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_330939d8be43ae745a897bcf1b7050f0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_330939d8be43ae745a897bcf1b7050f0 = L.geoJson(null, {
+                onEachFeature: geo_json_330939d8be43ae745a897bcf1b7050f0_onEachFeature,
+            
+                style: geo_json_330939d8be43ae745a897bcf1b7050f0_styler,
+        });
+
+        function geo_json_330939d8be43ae745a897bcf1b7050f0_add (data) {
+            geo_json_330939d8be43ae745a897bcf1b7050f0
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_330939d8be43ae745a897bcf1b7050f0_add({"features": [{"geometry": {"coordinates": [[[56.30517619264609, 58.01331825241539], [56.308674961446485, 58.009233492746546], [56.308888920610826, 58.0088140884813], [56.30910287977369, 58.008099956397274], [56.30891031652715, 58.007487831840905], [56.307273881135984, 58.00566589206392], [56.30902544059549, 58.005386725010766], [56.31087668230231, 58.00528863877253], [56.31215831117618, 58.005386725010766], [56.31269944336762, 58.00568852713491], [56.31373898678825, 58.00711450775546], [56.31351088913604, 58.01038726973846], [56.30930588568313, 58.01394435021544], [56.30517619264609, 58.01331825241539]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7a63c76e986769c4903aa27fbab8bdf1 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_eb3e49415c2bbdb4c0c92776263e74cf = $(`<div id="html_eb3e49415c2bbdb4c0c92776263e74cf" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 96,284.0р.</div>`)[0];
+                popup_7a63c76e986769c4903aa27fbab8bdf1.setContent(html_eb3e49415c2bbdb4c0c92776263e74cf);
+            
+        
+
+        geo_json_330939d8be43ae745a897bcf1b7050f0.bindPopup(popup_7a63c76e986769c4903aa27fbab8bdf1)
+        ;
+
+        
+    
+    
+        function geo_json_b131518edf9bf116cdfd35ef5ed7d5fe_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_b131518edf9bf116cdfd35ef5ed7d5fe_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b131518edf9bf116cdfd35ef5ed7d5fe = L.geoJson(null, {
+                onEachFeature: geo_json_b131518edf9bf116cdfd35ef5ed7d5fe_onEachFeature,
+            
+                style: geo_json_b131518edf9bf116cdfd35ef5ed7d5fe_styler,
+        });
+
+        function geo_json_b131518edf9bf116cdfd35ef5ed7d5fe_add (data) {
+            geo_json_b131518edf9bf116cdfd35ef5ed7d5fe
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_b131518edf9bf116cdfd35ef5ed7d5fe_add({"features": [{"geometry": {"coordinates": [[[56.30512625719098, 58.01330311033189], [56.30379342381059, 58.01240269227918], [56.30301758537212, 58.01151877286827], [56.30103016362034, 58.01064609215976], [56.29788997777172, 58.00817621386031], [56.30725901143978, 58.00570679836949], [56.30819426873492, 58.006765418953336], [56.308800060393, 58.00750305627599], [56.30900673230147, 58.008153429163826], [56.30865601081541, 58.009088106339846], [56.30512625719098, 58.01330311033189]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_393e67839c69bbc26c4b18cb6bbf79d9 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_4ab5235d4968beb867a8ff191ca0db27 = $(`<div id="html_4ab5235d4968beb867a8ff191ca0db27" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 104,659.0р.</div>`)[0];
+                popup_393e67839c69bbc26c4b18cb6bbf79d9.setContent(html_4ab5235d4968beb867a8ff191ca0db27);
+            
+        
+
+        geo_json_b131518edf9bf116cdfd35ef5ed7d5fe.bindPopup(popup_393e67839c69bbc26c4b18cb6bbf79d9)
+        ;
+
+        
+    
+    
+        function geo_json_66dae639935bd67edd9e182d73c07bc0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_66dae639935bd67edd9e182d73c07bc0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_66dae639935bd67edd9e182d73c07bc0 = L.geoJson(null, {
+                onEachFeature: geo_json_66dae639935bd67edd9e182d73c07bc0_onEachFeature,
+            
+                style: geo_json_66dae639935bd67edd9e182d73c07bc0_styler,
+        });
+
+        function geo_json_66dae639935bd67edd9e182d73c07bc0_add (data) {
+            geo_json_66dae639935bd67edd9e182d73c07bc0
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_66dae639935bd67edd9e182d73c07bc0_add({"features": [{"geometry": {"coordinates": [[[56.28645663703614, 58.01972284495943], [56.289207012475345, 58.01646739642487], [56.29238686844403, 58.01727109511023], [56.292597979213014, 58.01702649307367], [56.294464742372526, 58.017445809355024], [56.2950848802582, 58.017389900738465], [56.29604807314524, 58.017872109682855], [56.29907609857585, 58.018144562194436], [56.30170178877239, 58.019248717903565], [56.302255954542744, 58.02040874352224], [56.301200400694285, 58.02062537064444], [56.30102096844362, 58.02049302404308], [56.29762369495836, 58.021394589188276], [56.2968821891244, 58.02166118370434], [56.2952461919144, 58.02222318265535], [56.29354274366557, 58.02103332007698], [56.29034296427716, 58.022325369793265], [56.286787648695935, 58.01982024083571], [56.28645663703614, 58.01972284495943]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9259bd6df0017afd0aa6afd4f664614d = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_32d4f3717e352a5d88138c395f8065a9 = $(`<div id="html_32d4f3717e352a5d88138c395f8065a9" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 87,248.0р.</div>`)[0];
+                popup_9259bd6df0017afd0aa6afd4f664614d.setContent(html_32d4f3717e352a5d88138c395f8065a9);
+            
+        
+
+        geo_json_66dae639935bd67edd9e182d73c07bc0.bindPopup(popup_9259bd6df0017afd0aa6afd4f664614d)
+        ;
+
+        
+    
+    
+        function geo_json_462bdb4fc8f824e26344c35f8fc993f6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FD9A98", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_462bdb4fc8f824e26344c35f8fc993f6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_462bdb4fc8f824e26344c35f8fc993f6 = L.geoJson(null, {
+                onEachFeature: geo_json_462bdb4fc8f824e26344c35f8fc993f6_onEachFeature,
+            
+                style: geo_json_462bdb4fc8f824e26344c35f8fc993f6_styler,
+        });
+
+        function geo_json_462bdb4fc8f824e26344c35f8fc993f6_add (data) {
+            geo_json_462bdb4fc8f824e26344c35f8fc993f6
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_462bdb4fc8f824e26344c35f8fc993f6_add({"features": [{"geometry": {"coordinates": [[[56.30371795463034, 58.02618341739512], [56.29752059746153, 58.0238381799617], [56.295288230256745, 58.022238296055605], [56.29766996334794, 58.02140274751872], [56.301007423729686, 58.020502904191204], [56.30121980757261, 58.02065555777858], [56.30185695910029, 58.020888554103095], [56.30178110772815, 58.021250097119776], [56.30281268639189, 58.02185266069452], [56.30361671093823, 58.02194906992452], [56.30528544112957, 58.02345944727284], [56.30584674128522, 58.023483548521995], [56.3067671797981, 58.024191143027906], [56.30729813940491, 58.02435181442917], [56.307540863795566, 58.02465708810382], [56.30734365022812, 58.024890058365514], [56.30371795463034, 58.02618341739512]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_00831b20e90189373b7c07b08b834e29 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_e244a2a9a82d00051e79d3968e052feb = $(`<div id="html_e244a2a9a82d00051e79d3968e052feb" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 106,731.0р.</div>`)[0];
+                popup_00831b20e90189373b7c07b08b834e29.setContent(html_e244a2a9a82d00051e79d3968e052feb);
+            
+        
+
+        geo_json_462bdb4fc8f824e26344c35f8fc993f6.bindPopup(popup_00831b20e90189373b7c07b08b834e29)
+        ;
+
+        
+    
+    
+        function geo_json_033306b75cd7d5b273a831f535720ba2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_033306b75cd7d5b273a831f535720ba2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_033306b75cd7d5b273a831f535720ba2 = L.geoJson(null, {
+                onEachFeature: geo_json_033306b75cd7d5b273a831f535720ba2_onEachFeature,
+            
+                style: geo_json_033306b75cd7d5b273a831f535720ba2_styler,
+        });
+
+        function geo_json_033306b75cd7d5b273a831f535720ba2_add (data) {
+            geo_json_033306b75cd7d5b273a831f535720ba2
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_033306b75cd7d5b273a831f535720ba2_add({"features": [{"geometry": {"coordinates": [[[56.25708904273799, 58.01028910307642], [56.2524043229306, 58.0152507757748], [56.24642319034581, 58.01356224520836], [56.25107301557185, 58.00864883297558], [56.25708904273799, 58.01028910307642]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d3e8b8c14c3fc0a5be053c33c5ee5b3e = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_3537b0904bfab615bd1ff4d3cca208ec = $(`<div id="html_3537b0904bfab615bd1ff4d3cca208ec" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 101,594.0р.</div>`)[0];
+                popup_d3e8b8c14c3fc0a5be053c33c5ee5b3e.setContent(html_3537b0904bfab615bd1ff4d3cca208ec);
+            
+        
+
+        geo_json_033306b75cd7d5b273a831f535720ba2.bindPopup(popup_d3e8b8c14c3fc0a5be053c33c5ee5b3e)
+        ;
+
+        
+    
+    
+        function geo_json_eaee0511fc71cc3278c602124dd234de_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FD9A98", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_eaee0511fc71cc3278c602124dd234de_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_eaee0511fc71cc3278c602124dd234de = L.geoJson(null, {
+                onEachFeature: geo_json_eaee0511fc71cc3278c602124dd234de_onEachFeature,
+            
+                style: geo_json_eaee0511fc71cc3278c602124dd234de_styler,
+        });
+
+        function geo_json_eaee0511fc71cc3278c602124dd234de_add (data) {
+            geo_json_eaee0511fc71cc3278c602124dd234de
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_eaee0511fc71cc3278c602124dd234de_add({"features": [{"geometry": {"coordinates": [[[56.30444842010979, 58.02651282018607], [56.29996027135181, 58.0297385375803], [56.297296736235495, 58.02869570309042], [56.295742472334155, 58.029757386787], [56.29154240041794, 58.02843813010588], [56.29056950240323, 58.02905378928003], [56.28527788344172, 58.02709368985299], [56.28284870841648, 58.0251781065536], [56.28025206858436, 58.023598693838835], [56.28007553442623, 58.02326686142197], [56.28002215232732, 58.022565763097276], [56.28057732615747, 58.02177418395689], [56.27977659467092, 58.02174591294943], [56.27706478403891, 58.02128791951404], [56.27781213342513, 58.02011181074462], [56.28471977704612, 58.02193250118623], [56.285426421566, 58.022307868071465], [56.28852734553652, 58.0211278864702], [56.29489935285295, 58.02524035288266], [56.29538057270153, 58.02546787718285], [56.29757126714503, 58.02387197412389], [56.30444842010979, 58.02651282018607]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4874cf2e322c83584f6f607344d3c8c8 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_9784ef45e890d1dcc7a48d0dba4084b8 = $(`<div id="html_9784ef45e890d1dcc7a48d0dba4084b8" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 110,084.0р.</div>`)[0];
+                popup_4874cf2e322c83584f6f607344d3c8c8.setContent(html_9784ef45e890d1dcc7a48d0dba4084b8);
+            
+        
+
+        geo_json_eaee0511fc71cc3278c602124dd234de.bindPopup(popup_4874cf2e322c83584f6f607344d3c8c8)
+        ;
+
+        
+    
+    
+        function geo_json_56fcdb5b5c79cc4b18713808656713ed_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_56fcdb5b5c79cc4b18713808656713ed_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_56fcdb5b5c79cc4b18713808656713ed = L.geoJson(null, {
+                onEachFeature: geo_json_56fcdb5b5c79cc4b18713808656713ed_onEachFeature,
+            
+                style: geo_json_56fcdb5b5c79cc4b18713808656713ed_styler,
+        });
+
+        function geo_json_56fcdb5b5c79cc4b18713808656713ed_add (data) {
+            geo_json_56fcdb5b5c79cc4b18713808656713ed
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_56fcdb5b5c79cc4b18713808656713ed_add({"features": [{"geometry": {"coordinates": [[[56.30011708537796, 58.02974230903928], [56.30452550053175, 58.02651363331381], [56.3038774564499, 58.02618681592392], [56.30605303300976, 58.02538610069766], [56.30889208327247, 58.025337076734274], [56.31287293155856, 58.028678726109035], [56.31370613109186, 58.02992869939362], [56.31267519776395, 58.03407925181685], [56.30011708537796, 58.02974230903928]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_41443754176774b864a07bdc83c03604 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_61cc5c62357b83aa8f3355ff66124466 = $(`<div id="html_61cc5c62357b83aa8f3355ff66124466" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 102,282.0р.</div>`)[0];
+                popup_41443754176774b864a07bdc83c03604.setContent(html_61cc5c62357b83aa8f3355ff66124466);
+            
+        
+
+        geo_json_56fcdb5b5c79cc4b18713808656713ed.bindPopup(popup_41443754176774b864a07bdc83c03604)
+        ;
+
+        
+    
+    
+        function geo_json_561d741978bc7201bbd168d91f8279f9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#79D5C3", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_561d741978bc7201bbd168d91f8279f9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_561d741978bc7201bbd168d91f8279f9 = L.geoJson(null, {
+                onEachFeature: geo_json_561d741978bc7201bbd168d91f8279f9_onEachFeature,
+            
+                style: geo_json_561d741978bc7201bbd168d91f8279f9_styler,
+        });
+
+        function geo_json_561d741978bc7201bbd168d91f8279f9_add (data) {
+            geo_json_561d741978bc7201bbd168d91f8279f9
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_561d741978bc7201bbd168d91f8279f9_add({"features": [{"geometry": {"coordinates": [[[56.3266255554131, 58.03386162562484], [56.32552894472241, 58.034203600876964], [56.32471059935148, 58.03383815193695], [56.324079672653, 58.03353593832813], [56.32187142920847, 58.034657297031714], [56.318882038423425, 58.03343254887554], [56.318768614424584, 58.03295396320115], [56.318408084882776, 58.031920038393594], [56.32200282569897, 58.02861450580937], [56.32332476735269, 58.02906788765836], [56.32527668424885, 58.027309018969476], [56.329768281458996, 58.028708967430276], [56.329798325587404, 58.028812370541175], [56.325832510481234, 58.03222512481679], [56.327725290575586, 58.03271822693901], [56.3278604891544, 58.032972728599674], [56.32725960658436, 58.033513538614045], [56.3266255554131, 58.03386162562484]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0c9cb76c21a77f804d7be3a121460ccc = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_12b52d6ea07925c0380f67e8b15107e5 = $(`<div id="html_12b52d6ea07925c0380f67e8b15107e5" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 84,362.0р.</div>`)[0];
+                popup_0c9cb76c21a77f804d7be3a121460ccc.setContent(html_12b52d6ea07925c0380f67e8b15107e5);
+            
+        
+
+        geo_json_561d741978bc7201bbd168d91f8279f9.bindPopup(popup_0c9cb76c21a77f804d7be3a121460ccc)
+        ;
+
+        
+    
+    
+        function geo_json_7d4e91724defb357b10a73da0ea736dd_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FD9A98", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_7d4e91724defb357b10a73da0ea736dd_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7d4e91724defb357b10a73da0ea736dd = L.geoJson(null, {
+                onEachFeature: geo_json_7d4e91724defb357b10a73da0ea736dd_onEachFeature,
+            
+                style: geo_json_7d4e91724defb357b10a73da0ea736dd_styler,
+        });
+
+        function geo_json_7d4e91724defb357b10a73da0ea736dd_add (data) {
+            geo_json_7d4e91724defb357b10a73da0ea736dd
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_7d4e91724defb357b10a73da0ea736dd_add({"features": [{"geometry": {"coordinates": [[[56.22908921992351, 57.99835168399889], [56.225177425277394, 57.99850034725176], [56.22042510869193, 57.99955169411018], [56.217819216529364, 58.00020762973179], [56.21727197917534, 57.99844693326742], [56.217714980843226, 57.996893305657466], [56.217532567804284, 57.99575393565061], [56.2179755694722, 57.99431758756904], [56.21826561698788, 57.993133993902404], [56.2182476804314, 57.99241478266333], [56.22283493383364, 57.99203446745301], [56.22618916499718, 57.99070959001918], [56.22829135202133, 57.98953442114802], [56.229530617203665, 57.98740255692263], [56.229546743314955, 57.98544488692204], [56.23286074178594, 57.985829858096224], [56.23473980677977, 57.98879313194678], [56.23581785450807, 57.99060830363737], [56.2309392801493, 57.99689408377344], [56.22908921992351, 57.99835168399889]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_925e1e786ece818794ba280dae51a2d4 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_00bb78c7025fe641288b6a6d3c5585ce = $(`<div id="html_00bb78c7025fe641288b6a6d3c5585ce" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 105,495.0р.</div>`)[0];
+                popup_925e1e786ece818794ba280dae51a2d4.setContent(html_00bb78c7025fe641288b6a6d3c5585ce);
+            
+        
+
+        geo_json_7d4e91724defb357b10a73da0ea736dd.bindPopup(popup_925e1e786ece818794ba280dae51a2d4)
+        ;
+
+        
+    
+    
+        function geo_json_3692e37f8088f9ad82aca604c89dfdd0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_3692e37f8088f9ad82aca604c89dfdd0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3692e37f8088f9ad82aca604c89dfdd0 = L.geoJson(null, {
+                onEachFeature: geo_json_3692e37f8088f9ad82aca604c89dfdd0_onEachFeature,
+            
+                style: geo_json_3692e37f8088f9ad82aca604c89dfdd0_styler,
+        });
+
+        function geo_json_3692e37f8088f9ad82aca604c89dfdd0_add (data) {
+            geo_json_3692e37f8088f9ad82aca604c89dfdd0
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_3692e37f8088f9ad82aca604c89dfdd0_add({"features": [{"geometry": {"coordinates": [[[56.19699468068083, 58.00323359517935], [56.19573005306745, 58.00339181052547], [56.19460593963515, 58.00287993481777], [56.19602864569842, 58.002349437724604], [56.19746891603526, 58.00111158060156], [56.19861059374108, 57.999454832665435], [56.20023381672797, 57.9966252551755], [56.20214110752127, 57.99434627593044], [56.20543551889199, 57.9930964515394], [56.20748152174255, 57.99375812870963], [56.217423747308544, 57.99523888746819], [56.21767016549501, 57.99687712065406], [56.21716039832748, 57.99849803799074], [56.217745131254645, 58.00018244296268], [56.20847194707835, 58.002100014682526], [56.19699468068083, 58.00323359517935]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1a9b3cfddc6de17f4410aec1b3d36d7f = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_3f68869fa42ad0706b380ad59995fda9 = $(`<div id="html_3f68869fa42ad0706b380ad59995fda9" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 97,321.0р.</div>`)[0];
+                popup_1a9b3cfddc6de17f4410aec1b3d36d7f.setContent(html_3f68869fa42ad0706b380ad59995fda9);
+            
+        
+
+        geo_json_3692e37f8088f9ad82aca604c89dfdd0.bindPopup(popup_1a9b3cfddc6de17f4410aec1b3d36d7f)
+        ;
+
+        
+    
+    
+        function geo_json_a82a831591334606de889d8435bd541b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FD9A98", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_a82a831591334606de889d8435bd541b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a82a831591334606de889d8435bd541b = L.geoJson(null, {
+                onEachFeature: geo_json_a82a831591334606de889d8435bd541b_onEachFeature,
+            
+                style: geo_json_a82a831591334606de889d8435bd541b_styler,
+        });
+
+        function geo_json_a82a831591334606de889d8435bd541b_add (data) {
+            geo_json_a82a831591334606de889d8435bd541b
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_a82a831591334606de889d8435bd541b_add({"features": [{"geometry": {"coordinates": [[[56.21728581942338, 57.99513896184135], [56.207580413705216, 57.9937148292162], [56.19911826244007, 57.99124903284502], [56.20180529625452, 57.98835788295642], [56.21716550447687, 57.986359451780544], [56.227421703229055, 57.9850122436101], [56.22946705732585, 57.985288639427665], [56.22950716230798, 57.98735091013236], [56.22810348792751, 57.989519355388296], [56.22569718898973, 57.99079485009844], [56.22283837923874, 57.99194768896274], [56.21815551557117, 57.99235527893029], [56.21784243503964, 57.994359017522214], [56.21728581942338, 57.99513896184135]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3fbd66bdca11b9bb130b07e09483427e = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_b7224f967c059207a95bd613e34fb1e5 = $(`<div id="html_b7224f967c059207a95bd613e34fb1e5" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 108,980.0р.</div>`)[0];
+                popup_3fbd66bdca11b9bb130b07e09483427e.setContent(html_b7224f967c059207a95bd613e34fb1e5);
+            
+        
+
+        geo_json_a82a831591334606de889d8435bd541b.bindPopup(popup_3fbd66bdca11b9bb130b07e09483427e)
+        ;
+
+        
+    
+    
+        function geo_json_64c97022a920dc834c9abe7be35a183e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FD9A98", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_64c97022a920dc834c9abe7be35a183e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_64c97022a920dc834c9abe7be35a183e = L.geoJson(null, {
+                onEachFeature: geo_json_64c97022a920dc834c9abe7be35a183e_onEachFeature,
+            
+                style: geo_json_64c97022a920dc834c9abe7be35a183e_styler,
+        });
+
+        function geo_json_64c97022a920dc834c9abe7be35a183e_add (data) {
+            geo_json_64c97022a920dc834c9abe7be35a183e
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_64c97022a920dc834c9abe7be35a183e_add({"features": [{"geometry": {"coordinates": [[[56.19431219962155, 58.002855032940744], [56.191618992803825, 57.9998000645451], [56.18964934233287, 57.99744012077346], [56.18876397113817, 57.99686141920287], [56.18795643903917, 57.996117709183835], [56.190310015827976, 57.995643507391776], [56.19210381880217, 57.99494792712946], [56.19257638744591, 57.993744465134995], [56.1937819917062, 57.99211731695715], [56.191471250202284, 57.99179780874198], [56.191571712074165, 57.99026371063326], [56.19497323838672, 57.99046911789691], [56.20527737077026, 57.9930940032867], [56.202012043004885, 57.994370246398944], [56.200308660030885, 57.99634251343025], [56.197335205137506, 58.00110842342767], [56.19598529310079, 58.00228771905918], [56.19431219962155, 58.002855032940744]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_29d617697414fe662aad05c061e18e26 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_6de7cb4cef81f716c3e47d7dab437103 = $(`<div id="html_6de7cb4cef81f716c3e47d7dab437103" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 107,953.0р.</div>`)[0];
+                popup_29d617697414fe662aad05c061e18e26.setContent(html_6de7cb4cef81f716c3e47d7dab437103);
+            
+        
+
+        geo_json_64c97022a920dc834c9abe7be35a183e.bindPopup(popup_29d617697414fe662aad05c061e18e26)
+        ;
+
+        
+    
+    
+        function geo_json_c44d3961b869267bd9edba39b27f5776_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FD9A98", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_c44d3961b869267bd9edba39b27f5776_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c44d3961b869267bd9edba39b27f5776 = L.geoJson(null, {
+                onEachFeature: geo_json_c44d3961b869267bd9edba39b27f5776_onEachFeature,
+            
+                style: geo_json_c44d3961b869267bd9edba39b27f5776_styler,
+        });
+
+        function geo_json_c44d3961b869267bd9edba39b27f5776_add (data) {
+            geo_json_c44d3961b869267bd9edba39b27f5776
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_c44d3961b869267bd9edba39b27f5776_add({"features": [{"geometry": {"coordinates": [[[56.19121635900859, 57.99937776448428], [56.18755983027839, 58.00030215926549], [56.183769117008154, 58.00136873897077], [56.18430585516987, 58.002133101547116], [56.18095123257345, 58.00270191996316], [56.1748626090465, 58.00313741465479], [56.16884345196672, 58.0034346253577], [56.16765618075382, 57.99993975892275], [56.16654670676144, 57.99570725991961], [56.170253062344756, 57.99554356748598], [56.17569677210611, 57.99441816174959], [56.17744890263805, 57.993620874691686], [56.17818903095244, 57.9934356193086], [56.178292551547145, 57.993374419817115], [56.182347623558854, 57.995841399303146], [56.18570854305949, 57.99479469525866], [56.18963450172063, 57.997487321020486], [56.19121635900859, 57.99937776448428]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8c00557cecc4c32edcbcf655e6581531 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_ab3d53427401c3d511a55fc6bf7d9557 = $(`<div id="html_ab3d53427401c3d511a55fc6bf7d9557" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 107,464.0р.</div>`)[0];
+                popup_8c00557cecc4c32edcbcf655e6581531.setContent(html_ab3d53427401c3d511a55fc6bf7d9557);
+            
+        
+
+        geo_json_c44d3961b869267bd9edba39b27f5776.bindPopup(popup_8c00557cecc4c32edcbcf655e6581531)
+        ;
+
+        
+    
+    
+        function geo_json_d9810d2bc94f42aa635b50554d28c198_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_d9810d2bc94f42aa635b50554d28c198_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d9810d2bc94f42aa635b50554d28c198 = L.geoJson(null, {
+                onEachFeature: geo_json_d9810d2bc94f42aa635b50554d28c198_onEachFeature,
+            
+                style: geo_json_d9810d2bc94f42aa635b50554d28c198_styler,
+        });
+
+        function geo_json_d9810d2bc94f42aa635b50554d28c198_add (data) {
+            geo_json_d9810d2bc94f42aa635b50554d28c198
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_d9810d2bc94f42aa635b50554d28c198_add({"features": [{"geometry": {"coordinates": [[[56.16646229092734, 57.9956913168011], [56.16876431346691, 58.00344088416094], [56.162801308448024, 58.00367934431239], [56.16270527843656, 58.004797020603434], [56.158038136073856, 58.00526198962004], [56.15433984127765, 58.00701388118807], [56.153744353133305, 58.007030486385105], [56.15341526757942, 58.006623656839594], [56.15128404684975, 58.0062334282365], [56.15195788869818, 58.00456453025194], [56.15355630424489, 58.00381723727662], [56.1537156766949, 58.00341773057784], [56.14787824716501, 58.00090195422362], [56.146445437156245, 58.000782196578], [56.13863251873994, 58.00072016482673], [56.138430685388585, 58.00098268542686], [56.13758665501308, 58.00118686678513], [56.137127942852544, 58.00183829476276], [56.13512795783194, 58.00132298704395], [56.13478341772873, 58.000678690160925], [56.13391595611071, 58.00016447273978], [56.13362190132463, 57.99960349985716], [56.135724393044, 57.99677512770492], [56.13391595611071, 57.99659591202527], [56.13403615105426, 57.99640927073585], [56.134373224099875, 57.99561462452422], [56.13259487320744, 57.995023248456846], [56.131964564566914, 57.99308868626349], [56.134591409676915, 57.99187503714552], [56.1348587434704, 57.99096323308734], [56.136246298433974, 57.99082064917957], [56.13673050140966, 57.99139098745536], [56.139302392515674, 57.992583477310745], [56.14858928902987, 57.992863058969675], [56.15328353351154, 57.99318247148008], [56.15482972085459, 57.99350185090543], [56.16141914989606, 57.99493486186853], [56.16476009867108, 57.99556804375382], [56.16646229092734, 57.9956913168011]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2dbfddf71067616e692913858d058635 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_2628e06660ccc1cc1d81193cd7430b71 = $(`<div id="html_2628e06660ccc1cc1d81193cd7430b71" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 97,217.0р.</div>`)[0];
+                popup_2dbfddf71067616e692913858d058635.setContent(html_2628e06660ccc1cc1d81193cd7430b71);
+            
+        
+
+        geo_json_d9810d2bc94f42aa635b50554d28c198.bindPopup(popup_2dbfddf71067616e692913858d058635)
+        ;
+
+        
+    
+    
+        function geo_json_849fa87efe8e18e5ee8e5f8fe4010704_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_849fa87efe8e18e5ee8e5f8fe4010704_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_849fa87efe8e18e5ee8e5f8fe4010704 = L.geoJson(null, {
+                onEachFeature: geo_json_849fa87efe8e18e5ee8e5f8fe4010704_onEachFeature,
+            
+                style: geo_json_849fa87efe8e18e5ee8e5f8fe4010704_styler,
+        });
+
+        function geo_json_849fa87efe8e18e5ee8e5f8fe4010704_add (data) {
+            geo_json_849fa87efe8e18e5ee8e5f8fe4010704
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_849fa87efe8e18e5ee8e5f8fe4010704_add({"features": [{"geometry": {"coordinates": [[[56.27825976896, 57.98079875908516], [56.27597158632477, 57.980071371078566], [56.271164579729714, 57.97649472725618], [56.26683628274759, 57.97707297267368], [56.25926228857955, 57.97656320736908], [56.26219495478648, 57.96661370835241], [56.2623426270909, 57.96562547638533], [56.265776771375926, 57.96674303818412], [56.269914963501975, 57.965522031650096], [56.27160340877788, 57.96495494346243], [56.27353516712881, 57.96539688192476], [56.273970181413546, 57.966319850877994], [56.27387433264806, 57.96716639154181], [56.27526124098421, 57.96835527718804], [56.27688646348682, 57.969163391020345], [56.277483224874345, 57.97072569277188], [56.27739434551904, 57.97102871755425], [56.27802736748606, 57.97280253065881], [56.27878919053515, 57.97436467379492], [56.2781543379954, 57.974936993676664], [56.279395211918114, 57.97559082525933], [56.28133592137115, 57.97655943300802], [56.283768800586444, 57.97758968526267], [56.28334516232147, 57.97848757623029], [56.28170634785005, 57.97975068300832], [56.27967894850286, 57.9802612880037], [56.27971273849187, 57.980530024552394], [56.27825976896, 57.98079875908516]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_41e315b89f40f5c1657e917aa2b1f7cf = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_2781ea1c04bd8360216af8389b413449 = $(`<div id="html_2781ea1c04bd8360216af8389b413449" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 86,873.0р.</div>`)[0];
+                popup_41e315b89f40f5c1657e917aa2b1f7cf.setContent(html_2781ea1c04bd8360216af8389b413449);
+            
+        
+
+        geo_json_849fa87efe8e18e5ee8e5f8fe4010704.bindPopup(popup_41e315b89f40f5c1657e917aa2b1f7cf)
+        ;
+
+        
+    
+    
+        function geo_json_4bf5d3eb86457b3f7c2c71c88144f72c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_4bf5d3eb86457b3f7c2c71c88144f72c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4bf5d3eb86457b3f7c2c71c88144f72c = L.geoJson(null, {
+                onEachFeature: geo_json_4bf5d3eb86457b3f7c2c71c88144f72c_onEachFeature,
+            
+                style: geo_json_4bf5d3eb86457b3f7c2c71c88144f72c_styler,
+        });
+
+        function geo_json_4bf5d3eb86457b3f7c2c71c88144f72c_add (data) {
+            geo_json_4bf5d3eb86457b3f7c2c71c88144f72c
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_4bf5d3eb86457b3f7c2c71c88144f72c_add({"features": [{"geometry": {"coordinates": [[[56.2960697101353, 57.988626354183566], [56.29308433398239, 57.98703630294884], [56.28236652125588, 57.98656884973542], [56.28068755304119, 57.98596635117414], [56.28166909651381, 57.98371374436073], [56.28526687480061, 57.98357288194913], [56.28467178031087, 57.98145743989011], [56.28529374636673, 57.98094353890011], [56.284939006737744, 57.979980575174096], [56.28626296622872, 57.97977965204191], [56.2870026059106, 57.979708065263566], [56.287096528409705, 57.97946217915228], [56.28929518276257, 57.97875096991396], [56.294040586178795, 57.97823759088871], [56.296909343912404, 57.97837068986078], [56.29701692232706, 57.97804111055038], [56.29795687725286, 57.97803643331835], [56.29772997554895, 57.97914072087329], [56.295890451015254, 57.97908486278712], [56.29555234217602, 57.98147266530148], [56.292302785620734, 57.98133947377465], [56.29180170235662, 57.985720609259005], [56.29370916582445, 57.98581274056207], [56.29646665783994, 57.98603916367355], [56.29671393267691, 57.98646420014563], [56.297485729898284, 57.986873342639655], [56.29721925616988, 57.98699761616038], [56.29664971222968, 57.98737199736897], [56.296769316456846, 57.987676934010835], [56.2977375411557, 57.987855064114996], [56.2960697101353, 57.988626354183566]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a1bbecb17dd3cdfe00b9f1fcdb5a4435 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_3a4fde5186ff7efb98081d6721e16092 = $(`<div id="html_3a4fde5186ff7efb98081d6721e16092" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 92,155.0р.</div>`)[0];
+                popup_a1bbecb17dd3cdfe00b9f1fcdb5a4435.setContent(html_3a4fde5186ff7efb98081d6721e16092);
+            
+        
+
+        geo_json_4bf5d3eb86457b3f7c2c71c88144f72c.bindPopup(popup_a1bbecb17dd3cdfe00b9f1fcdb5a4435)
+        ;
+
+        
+    
+    
+        function geo_json_974b6a7180c7f1b33340e40e19677712_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FDC7BA", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_974b6a7180c7f1b33340e40e19677712_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_974b6a7180c7f1b33340e40e19677712 = L.geoJson(null, {
+                onEachFeature: geo_json_974b6a7180c7f1b33340e40e19677712_onEachFeature,
+            
+                style: geo_json_974b6a7180c7f1b33340e40e19677712_styler,
+        });
+
+        function geo_json_974b6a7180c7f1b33340e40e19677712_add (data) {
+            geo_json_974b6a7180c7f1b33340e40e19677712
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_974b6a7180c7f1b33340e40e19677712_add({"features": [{"geometry": {"coordinates": [[[56.19838324962291, 57.963667621671135], [56.208171567553364, 57.97381191183061], [56.20230897789938, 57.97920329892577], [56.19906443984388, 57.98201829315366], [56.19098069838947, 57.9896003489807], [56.18847355534558, 57.98889677009137], [56.18581893330082, 57.98616049858188], [56.17736181635513, 57.98080969576614], [56.17721043925741, 57.980749806048294], [56.176889822483446, 57.980614696678884], [56.17679924994707, 57.98056716864173], [56.16545277510778, 57.9766333948171], [56.18067412575124, 57.96144087321744], [56.19054977716476, 57.9646252422542], [56.19258450533651, 57.96484736712984], [56.19838324962291, 57.963667621671135]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_db645dae5b98be223ab14b266e7c1c10 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_3ec649a2c4048ddda5e75d033a49965b = $(`<div id="html_3ec649a2c4048ddda5e75d033a49965b" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 98,829.0р.</div>`)[0];
+                popup_db645dae5b98be223ab14b266e7c1c10.setContent(html_3ec649a2c4048ddda5e75d033a49965b);
+            
+        
+
+        geo_json_974b6a7180c7f1b33340e40e19677712.bindPopup(popup_db645dae5b98be223ab14b266e7c1c10)
+        ;
+
+        
+    
+    
+        function geo_json_b59c92d6d57f572723e22daa28b4f7c5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#79D5C3", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_b59c92d6d57f572723e22daa28b4f7c5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b59c92d6d57f572723e22daa28b4f7c5 = L.geoJson(null, {
+                onEachFeature: geo_json_b59c92d6d57f572723e22daa28b4f7c5_onEachFeature,
+            
+                style: geo_json_b59c92d6d57f572723e22daa28b4f7c5_styler,
+        });
+
+        function geo_json_b59c92d6d57f572723e22daa28b4f7c5_add (data) {
+            geo_json_b59c92d6d57f572723e22daa28b4f7c5
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_b59c92d6d57f572723e22daa28b4f7c5_add({"features": [{"geometry": {"coordinates": [[[56.19114262868419, 57.989600450623186], [56.198933170009354, 57.982058764833624], [56.20830502618699, 57.97385047553544], [56.19863048338365, 57.963610975879334], [56.200012560927206, 57.962786190915665], [56.204849832327454, 57.96248834723781], [56.21214892935453, 57.971789066476504], [56.223530868026955, 57.977532485373445], [56.22953163608679, 57.98520971464902], [56.227225146757576, 57.98493266482066], [56.20520344832681, 57.98791022187635], [56.20177127975239, 57.98830931085669], [56.19889268675425, 57.991267125865164], [56.19114262868419, 57.989600450623186]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b8920005e80d1d41c653a0aca61e51db = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_3fcdb2d190471ecf60ad689dc5461bb3 = $(`<div id="html_3fcdb2d190471ecf60ad689dc5461bb3" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 84,029.0р.</div>`)[0];
+                popup_b8920005e80d1d41c653a0aca61e51db.setContent(html_3fcdb2d190471ecf60ad689dc5461bb3);
+            
+        
+
+        geo_json_b59c92d6d57f572723e22daa28b4f7c5.bindPopup(popup_b8920005e80d1d41c653a0aca61e51db)
+        ;
+
+        
+    
+    
+        function geo_json_29ce17f3adeea74bd2421c69fc1d91f2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#F8E8BF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_29ce17f3adeea74bd2421c69fc1d91f2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_29ce17f3adeea74bd2421c69fc1d91f2 = L.geoJson(null, {
+                onEachFeature: geo_json_29ce17f3adeea74bd2421c69fc1d91f2_onEachFeature,
+            
+                style: geo_json_29ce17f3adeea74bd2421c69fc1d91f2_styler,
+        });
+
+        function geo_json_29ce17f3adeea74bd2421c69fc1d91f2_add (data) {
+            geo_json_29ce17f3adeea74bd2421c69fc1d91f2
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_29ce17f3adeea74bd2421c69fc1d91f2_add({"features": [{"geometry": {"coordinates": [[[56.16544647201525, 57.976605047490324], [56.15731035747328, 57.97340840023975], [56.159308655000046, 57.97430843142635], [56.15278956605641, 57.97680630967707], [56.1503600919161, 57.97572558716084], [56.14967016629083, 57.975228856775374], [56.14961617797675, 57.97384746934455], [56.147331177046425, 57.97233525514133], [56.144390659569865, 57.970381268301225], [56.142931219679326, 57.96863966969846], [56.14326414653274, 57.96790141808657], [56.14535507483956, 57.96647232147234], [56.14964919605805, 57.96813959531676], [56.15051924638084, 57.96782698765216], [56.15216285496774, 57.96623346270738], [56.15565709086178, 57.96716387681974], [56.157186696131475, 57.96683637380619], [56.15794448222843, 57.96672472436779], [56.158211110671175, 57.96644932093284], [56.15496947014407, 57.96531791164915], [56.155643057785966, 57.96446933125361], [56.157018299221534, 57.9649085113343], [56.15690603461485, 57.96535512962765], [56.1584216068087, 57.965801742357456], [56.15808175261205, 57.966297497011396], [56.16084509549543, 57.96712445727081], [56.16186555778327, 57.966313303147416], [56.168252437234656, 57.96391216589845], [56.169456697334056, 57.964100384365565], [56.17006939855762, 57.96374488507433], [56.1628338799234, 57.961571646000195], [56.16694238763284, 57.96028931510891], [56.16986331105977, 57.9599807124183], [56.17282105026411, 57.959913866906234], [56.17552741587252, 57.96015303932083], [56.18046317422836, 57.96152956645893], [56.17606290794676, 57.965832996005744], [56.16544647201525, 57.976605047490324]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_98e0c65b7c88b79d283865ed2e41ffb5 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_18b611f5533130f2cfbe7d1c80c2db45 = $(`<div id="html_18b611f5533130f2cfbe7d1c80c2db45" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 94,818.0р.</div>`)[0];
+                popup_98e0c65b7c88b79d283865ed2e41ffb5.setContent(html_18b611f5533130f2cfbe7d1c80c2db45);
+            
+        
+
+        geo_json_29ce17f3adeea74bd2421c69fc1d91f2.bindPopup(popup_98e0c65b7c88b79d283865ed2e41ffb5)
+        ;
+
+        
+    
+    
+        function geo_json_7200233f61978594596b5b5380bb0441_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#79D5C3", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_7200233f61978594596b5b5380bb0441_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7200233f61978594596b5b5380bb0441 = L.geoJson(null, {
+                onEachFeature: geo_json_7200233f61978594596b5b5380bb0441_onEachFeature,
+            
+                style: geo_json_7200233f61978594596b5b5380bb0441_styler,
+        });
+
+        function geo_json_7200233f61978594596b5b5380bb0441_add (data) {
+            geo_json_7200233f61978594596b5b5380bb0441
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_7200233f61978594596b5b5380bb0441_add({"features": [{"geometry": {"coordinates": [[[56.127296219712036, 58.00688979679143], [56.124869433503534, 58.00628439214725], [56.12262764893376, 58.00767392472875], [56.120919104384114, 58.00722420639477], [56.12261676648441, 58.00618060746575], [56.121180283168115, 58.00599610062258], [56.11976556475048, 58.007449066268094], [56.11850527471924, 58.00719450481236], [56.11999617028221, 58.00533791392698], [56.11815972173014, 58.00492125995868], [56.11718049264607, 58.006026306906136], [56.11102117919208, 58.00582405221547], [56.10918989362861, 58.00431470274714], [56.10887545752021, 58.00396638529173], [56.107856699736374, 58.00366071435343], [56.10866679628646, 58.002607105158404], [56.105598248746276, 58.00184614589824], [56.108137169990925, 58.00041344699372], [56.10839924426611, 58.000118332995754], [56.113061091832606, 58.00041519829753], [56.119531050492725, 58.000475956756986], [56.12103353639219, 58.000761407352456], [56.120055836725044, 58.00150527697184], [56.12084727727074, 58.00144411705057], [56.11800182786723, 58.00478218460057], [56.120300974126934, 58.00536341187967], [56.1228405524391, 58.00579335469635], [56.12380228623772, 58.00587297316983], [56.12459872203928, 58.0055544982136], [56.1276772966381, 58.006522503099006], [56.127296219712036, 58.00688979679143]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e0133b0363ed2e4c296f5fd624abb655 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_0931df643d56b0fb52e0986e170fe884 = $(`<div id="html_0931df643d56b0fb52e0986e170fe884" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 85,925.0р.</div>`)[0];
+                popup_e0133b0363ed2e4c296f5fd624abb655.setContent(html_0931df643d56b0fb52e0986e170fe884);
+            
+        
+
+        geo_json_7200233f61978594596b5b5380bb0441.bindPopup(popup_e0133b0363ed2e4c296f5fd624abb655)
+        ;
+
+        
+    
+    
+        function geo_json_5ea09d04998b0c97824485ca4500029d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_5ea09d04998b0c97824485ca4500029d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5ea09d04998b0c97824485ca4500029d = L.geoJson(null, {
+                onEachFeature: geo_json_5ea09d04998b0c97824485ca4500029d_onEachFeature,
+            
+                style: geo_json_5ea09d04998b0c97824485ca4500029d_styler,
+        });
+
+        function geo_json_5ea09d04998b0c97824485ca4500029d_add (data) {
+            geo_json_5ea09d04998b0c97824485ca4500029d
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_5ea09d04998b0c97824485ca4500029d_add({"features": [{"geometry": {"coordinates": [[[56.30298320794515, 58.11846042908314], [56.30189906151662, 58.11798528314719], [56.30277560543814, 58.11686440096901], [56.300820251128755, 58.116773965722246], [56.29726605977177, 58.11662333207525], [56.297295491222826, 58.11649508182421], [56.29689080876946, 58.116277443978134], [56.29670686219916, 58.11630853518051], [56.295625256368766, 58.11573723001007], [56.296751009375754, 58.115092071665316], [56.296646309122195, 58.11382411375382], [56.30278231808509, 58.1140715435518], [56.30336851028784, 58.11398709503379], [56.30362671462598, 58.11207521855965], [56.30206641743581, 58.11203953708488], [56.302284885839754, 58.11052001745213], [56.300899713304744, 58.110533445370265], [56.301026793358034, 58.10927130126305], [56.301166581416624, 58.1089154759666], [56.30119199742737, 58.107733841957355], [56.302437381952984, 58.10806282354196], [56.303991630396155, 58.10799405865495], [56.303912701639774, 58.10674304777456], [56.30724754424588, 58.10535719715824], [56.3071047514471, 58.10663512774332], [56.307778975217474, 58.106690711586964], [56.30804532540037, 58.10713771201921], [56.310082120914785, 58.107170822939565], [56.312049722235884, 58.10880044293822], [56.31217903937366, 58.109565610544735], [56.31434192079038, 58.109568702238306], [56.31527332827807, 58.10989043190489], [56.31430609742554, 58.11042506448862], [56.313786658634484, 58.11061431303898], [56.31240745908411, 58.11054334495043], [56.31027741459192, 58.11138332078977], [56.3130057301546, 58.11218413363025], [56.31681739615968, 58.110924704809406], [56.31934247130948, 58.11296561023073], [56.32068440615748, 58.11455676610046], [56.31909978096337, 58.115816066599905], [56.31190472603305, 58.11546165718585], [56.31073803894236, 58.115673519428924], [56.30963018430589, 58.11531126605743], [56.30804753482374, 58.1155007528954], [56.30609996444318, 58.11495919997736], [56.30549855763928, 58.116447216563046], [56.30298320794515, 58.11846042908314]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9d9b2c15e2f5300435e2d870c9bd4dd0 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_069cf9ce61747d3cc95941c4e651c31d = $(`<div id="html_069cf9ce61747d3cc95941c4e651c31d" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_9d9b2c15e2f5300435e2d870c9bd4dd0.setContent(html_069cf9ce61747d3cc95941c4e651c31d);
+            
+        
+
+        geo_json_5ea09d04998b0c97824485ca4500029d.bindPopup(popup_9d9b2c15e2f5300435e2d870c9bd4dd0)
+        ;
+
+        
+    
+    
+        function geo_json_b2111750545a559f760cf56b046c2a08_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#B9EABD", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_b2111750545a559f760cf56b046c2a08_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b2111750545a559f760cf56b046c2a08 = L.geoJson(null, {
+                onEachFeature: geo_json_b2111750545a559f760cf56b046c2a08_onEachFeature,
+            
+                style: geo_json_b2111750545a559f760cf56b046c2a08_styler,
+        });
+
+        function geo_json_b2111750545a559f760cf56b046c2a08_add (data) {
+            geo_json_b2111750545a559f760cf56b046c2a08
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_b2111750545a559f760cf56b046c2a08_add({"features": [{"geometry": {"coordinates": [[[56.354572225041835, 58.069058514522254], [56.35001797159063, 58.068178719412856], [56.351110131256064, 58.06752155469479], [56.34805781245447, 58.064258375920275], [56.34635733970123, 58.06416189826834], [56.34366031726702, 58.06115471797179], [56.34275593010602, 58.0604883169749], [56.34186768918531, 58.06053957880738], [56.341528542651645, 58.060462686030775], [56.340656451564655, 58.059369081957016], [56.34093099875881, 58.05889061964592], [56.34088254925416, 58.058497592238865], [56.34267518093162, 58.05807038363082], [56.34563060072395, 58.05797639705136], [56.34575979940303, 58.0576004482607], [56.34742323240141, 58.05730993966708], [56.34785927794431, 58.057318484071175], [56.34840837233256, 58.05790804302001], [56.34815305024392, 58.0555867091544], [56.34411922231021, 58.05556176973772], [56.342455317968444, 58.053260330211884], [56.340319556836306, 58.05354942357738], [56.340331974052106, 58.053128923363346], [56.339872537064196, 58.0524193180303], [56.342225384949074, 58.0516483854465], [56.346171650215354, 58.049146564117535], [56.35291773765823, 58.0500652461036], [56.35406269147734, 58.052364296084136], [56.35517867227031, 58.05443774715181], [56.363434282001464, 58.06381278640916], [56.36402618631964, 58.06459232041688], [56.35940468118453, 58.06554067551852], [56.36000331120898, 58.066705734551334], [56.356733760266096, 58.0694509522298], [56.354572225041835, 58.069058514522254]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d553135a1508973bc7b280ddadc76a24 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_f9881459604fc618aaa29a5631143bc3 = $(`<div id="html_f9881459604fc618aaa29a5631143bc3" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 86,289.0р.</div>`)[0];
+                popup_d553135a1508973bc7b280ddadc76a24.setContent(html_f9881459604fc618aaa29a5631143bc3);
+            
+        
+
+        geo_json_b2111750545a559f760cf56b046c2a08.bindPopup(popup_d553135a1508973bc7b280ddadc76a24)
+        ;
+
+        
+    
+    
+        function geo_json_edd15dfa78b35240ad96395c289d6eec_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#41BAC2", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_edd15dfa78b35240ad96395c289d6eec_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_edd15dfa78b35240ad96395c289d6eec = L.geoJson(null, {
+                onEachFeature: geo_json_edd15dfa78b35240ad96395c289d6eec_onEachFeature,
+            
+                style: geo_json_edd15dfa78b35240ad96395c289d6eec_styler,
+        });
+
+        function geo_json_edd15dfa78b35240ad96395c289d6eec_add (data) {
+            geo_json_edd15dfa78b35240ad96395c289d6eec
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_edd15dfa78b35240ad96395c289d6eec_add({"features": [{"geometry": {"coordinates": [[[56.09274666081342, 58.04976628380007], [56.09498387074095, 58.05092795919424], [56.09908076142, 58.051075940608996], [56.09895491836019, 58.052141388703376], [56.097165145040606, 58.05210439357083], [56.0971791276026, 58.05380608680903], [56.09368348709134, 58.05371730481798], [56.09358560915737, 58.05284427015462], [56.09017386401814, 58.0509649536659], [56.087405316734674, 58.052400346042845], [56.08375160019679, 58.05029195644835], [56.08208767531508, 58.04937444166717], [56.08208767909625, 58.04502344496541], [56.08011613784862, 58.04503824557966], [56.07993437066196, 58.04227167593925], [56.07614509634871, 58.041894229144845], [56.07638279990272, 58.04145757003721], [56.083038505451924, 58.042079252918654], [56.08735911712114, 58.04237528842506], [56.091093077188475, 58.04175295814011], [56.09155414299681, 58.04204709905946], [56.09780420382529, 58.0407862076689], [56.10688093133618, 58.03872280742493], [56.107221814546875, 58.039099386652], [56.112009000507186, 58.037914717777426], [56.11302309299738, 58.041136461811675], [56.12556829680296, 58.04009175814727], [56.1253159307108, 58.0390422420559], [56.11881432566979, 58.039309689343746], [56.118288970342086, 58.03734749721882], [56.11990884727926, 58.03730995012539], [56.12009893591113, 58.037948548172594], [56.124940052686824, 58.03764135029261], [56.12478314346956, 58.03689696618444], [56.13049349976035, 58.0360742693853], [56.133221099448626, 58.03534726737014], [56.13486353001433, 58.034660298133105], [56.13698215145271, 58.03381071943278], [56.137613257117145, 58.03342102463171], [56.138547501196726, 58.03218601637633], [56.13919445166615, 58.032181634347694], [56.140412006499545, 58.03374910756435], [56.1445891246174, 58.035504693980556], [56.145843269558554, 58.034811958796475], [56.15213013513329, 58.0353048403946], [56.145700250373245, 58.03608302467139], [56.142282952834265, 58.03653281469046], [56.14116783662675, 58.03674552645547], [56.13726942287281, 58.03798390201895], [56.13241177201168, 58.03935323848507], [56.129475111910644, 58.0398071963469], [56.12267502429815, 58.0403787204123], [56.11312302616224, 58.04114526898731], [56.109720569565184, 58.04203237997237], [56.10063029247823, 58.04407398704328], [56.10159998181052, 58.04525742895629], [56.09274666081342, 58.04976628380007]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_23fc5df4b52ae04cfa2cb370d55746cd = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_ee8de34b5fd3e56af31d892989eba1ea = $(`<div id="html_ee8de34b5fd3e56af31d892989eba1ea" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: 77,366.0р.</div>`)[0];
+                popup_23fc5df4b52ae04cfa2cb370d55746cd.setContent(html_ee8de34b5fd3e56af31d892989eba1ea);
+            
+        
+
+        geo_json_edd15dfa78b35240ad96395c289d6eec.bindPopup(popup_23fc5df4b52ae04cfa2cb370d55746cd)
+        ;
+
+        
+    
+    
+        function geo_json_34988385fc8e5390aadbb1c08f1378da_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_34988385fc8e5390aadbb1c08f1378da_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_34988385fc8e5390aadbb1c08f1378da = L.geoJson(null, {
+                onEachFeature: geo_json_34988385fc8e5390aadbb1c08f1378da_onEachFeature,
+            
+                style: geo_json_34988385fc8e5390aadbb1c08f1378da_styler,
+        });
+
+        function geo_json_34988385fc8e5390aadbb1c08f1378da_add (data) {
+            geo_json_34988385fc8e5390aadbb1c08f1378da
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_34988385fc8e5390aadbb1c08f1378da_add({"features": [{"geometry": {"coordinates": [[[56.36738376624942, 58.11411714577423], [56.36589746108376, 58.11154308559412], [56.36505083795433, 58.10844269769629], [56.3695661954182, 58.10677279242702], [56.37767536421612, 58.10497697680074], [56.381784984659305, 58.104108674722255], [56.38643204004879, 58.10242862510208], [56.3876553525437, 58.101656577258325], [56.38986790903104, 58.10277893913735], [56.38773497020716, 58.10522416194328], [56.38436361099011, 58.10676235490621], [56.38403180347916, 58.107661158388396], [56.38269233251529, 58.10898372264819], [56.38367868131553, 58.10911920662619], [56.383409079309246, 58.109563868371424], [56.380545240511026, 58.111448473878994], [56.377059705122406, 58.11370041187428], [56.370716468152125, 58.11467498421257], [56.36902787351309, 58.114519506187605], [56.36738376624942, 58.11411714577423]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7c274c4daca601d3ebc77b55848d89fa = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_cf93e9658124e552c9e09a4daea593a3 = $(`<div id="html_cf93e9658124e552c9e09a4daea593a3" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_7c274c4daca601d3ebc77b55848d89fa.setContent(html_cf93e9658124e552c9e09a4daea593a3);
+            
+        
+
+        geo_json_34988385fc8e5390aadbb1c08f1378da.bindPopup(popup_7c274c4daca601d3ebc77b55848d89fa)
+        ;
+
+        
+    
+    
+        function geo_json_c6f808ad4ca21f69d4e710a007e19138_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_c6f808ad4ca21f69d4e710a007e19138_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c6f808ad4ca21f69d4e710a007e19138 = L.geoJson(null, {
+                onEachFeature: geo_json_c6f808ad4ca21f69d4e710a007e19138_onEachFeature,
+            
+                style: geo_json_c6f808ad4ca21f69d4e710a007e19138_styler,
+        });
+
+        function geo_json_c6f808ad4ca21f69d4e710a007e19138_add (data) {
+            geo_json_c6f808ad4ca21f69d4e710a007e19138
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_c6f808ad4ca21f69d4e710a007e19138_add({"features": [{"geometry": {"coordinates": [[[56.03838549972943, 58.03917178109711], [56.02426594771785, 58.03894883575995], [56.020315201149685, 58.034251568028736], [56.01598443409566, 58.03266143141329], [56.01457638780437, 58.03383196622448], [56.0135264909417, 58.03360152334534], [56.01377474979225, 58.03309203744351], [56.01117344937353, 58.03221385664392], [56.01139443428295, 58.031029881087704], [56.01664398358466, 58.0328127242272], [56.019504732546295, 58.032235287525594], [56.01640521331629, 58.02789923130297], [56.014661799499095, 58.02815606637523], [56.01343119507098, 58.02779673105289], [56.00999488754232, 58.030437129885996], [55.99957024849377, 58.026887571787995], [55.997753600000834, 58.02607583076889], [55.99717986166422, 58.024964635344844], [56.00221714116583, 58.023773333498866], [56.005208527444296, 58.02114296579333], [56.00732606844832, 58.021685437980636], [56.00969660097144, 58.0221836209748], [56.010524405979396, 58.023578496449176], [56.013281066605515, 58.023100740929436], [56.015337978950015, 58.02593316833628], [56.01806568489212, 58.02542361826676], [56.01634941898854, 58.02328500933322], [56.01778381609151, 58.02259645804949], [56.02006001116618, 58.024952024205305], [56.02105365452175, 58.026180815407685], [56.023023091448295, 58.027201625688605], [56.024627156769185, 58.02803840169793], [56.028596090201916, 58.029983190927624], [56.026640297254716, 58.03133110861074], [56.027853107407054, 58.031967446943185], [56.0302048510155, 58.0311428527103], [56.03213504229055, 58.032422535354385], [56.03451789796969, 58.03256723263675], [56.03769502697082, 58.03388303697466], [56.03763216786413, 58.03641371129618], [56.0382905184764, 58.03645820289907], [56.03838549972943, 58.03917178109711]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f49a841daa0b0fc98bfaaa1dfa49c192 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_5f1e54bac991589ddbad8f73e32b8f6a = $(`<div id="html_5f1e54bac991589ddbad8f73e32b8f6a" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_f49a841daa0b0fc98bfaaa1dfa49c192.setContent(html_5f1e54bac991589ddbad8f73e32b8f6a);
+            
+        
+
+        geo_json_c6f808ad4ca21f69d4e710a007e19138.bindPopup(popup_f49a841daa0b0fc98bfaaa1dfa49c192)
+        ;
+
+        
+    
+    
+        function geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05 = L.geoJson(null, {
+                onEachFeature: geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05_onEachFeature,
+            
+                style: geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05_styler,
+        });
+
+        function geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05_add (data) {
+            geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05_add({"features": [{"geometry": {"coordinates": [[[55.97516513681367, 58.01997784655347], [55.97226744106911, 58.01862843944565], [55.969357116648325, 58.01770109104538], [55.96209495878895, 58.0162475342602], [55.95945569280127, 58.01560716456157], [55.95663277274738, 58.01395800302288], [55.95870590249834, 58.01254737689982], [55.95290703184719, 58.00941555979054], [55.96484253842496, 58.00428056047261], [55.96563177314977, 58.00457723173878], [55.967100423979645, 58.003955418908134], [55.96948890112995, 58.00497888768763], [55.968039909886954, 58.00567809743052], [55.96323130034375, 58.00930343880003], [55.983657059399974, 58.017256458159835], [55.978236005007034, 58.02089716704839], [55.97516513681367, 58.01997784655347]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4b41f62f08389fe5c58b6643262ebf24 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_d552157c6a894403598910f93733b266 = $(`<div id="html_d552157c6a894403598910f93733b266" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_4b41f62f08389fe5c58b6643262ebf24.setContent(html_d552157c6a894403598910f93733b266);
+            
+        
+
+        geo_json_1f535edfd6e0e75c10ddc6e3d09eaf05.bindPopup(popup_4b41f62f08389fe5c58b6643262ebf24)
+        ;
+
+        
+    
+    
+        function geo_json_cc6f09d74fd545e727ed2459199ac365_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_cc6f09d74fd545e727ed2459199ac365_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cc6f09d74fd545e727ed2459199ac365 = L.geoJson(null, {
+                onEachFeature: geo_json_cc6f09d74fd545e727ed2459199ac365_onEachFeature,
+            
+                style: geo_json_cc6f09d74fd545e727ed2459199ac365_styler,
+        });
+
+        function geo_json_cc6f09d74fd545e727ed2459199ac365_add (data) {
+            geo_json_cc6f09d74fd545e727ed2459199ac365
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_cc6f09d74fd545e727ed2459199ac365_add({"features": [{"geometry": {"coordinates": [[[55.965578475065314, 58.0045014129542], [55.96486544175127, 58.004238397855175], [55.95040569144075, 58.010558223530836], [55.93890156498898, 58.00456907259297], [55.942266942668994, 58.002973951304966], [55.93551388575253, 57.99871569757849], [55.934019705888716, 57.99962271994485], [55.93180129145716, 57.99850406246259], [55.93609499250721, 57.99578195480552], [55.94137747309151, 57.99216456179286], [55.943187937962335, 57.99327905322667], [55.945345301094505, 57.99246824797106], [55.95002186037246, 57.99548316071164], [55.967541072040405, 58.0036842522309], [55.965578475065314, 58.0045014129542]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e0f6101cc3c2c0e18b03102509c53b9f = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_b7d053505229c03644d94a1bf15fbc14 = $(`<div id="html_b7d053505229c03644d94a1bf15fbc14" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_e0f6101cc3c2c0e18b03102509c53b9f.setContent(html_b7d053505229c03644d94a1bf15fbc14);
+            
+        
+
+        geo_json_cc6f09d74fd545e727ed2459199ac365.bindPopup(popup_e0f6101cc3c2c0e18b03102509c53b9f)
+        ;
+
+        
+    
+    
+        function geo_json_cd202b0a399074ee66529748d21316a9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "", "fillColor": "#FFFFFF", "fillOpacity": 0.6};
+            }
+        }
+
+        function geo_json_cd202b0a399074ee66529748d21316a9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cd202b0a399074ee66529748d21316a9 = L.geoJson(null, {
+                onEachFeature: geo_json_cd202b0a399074ee66529748d21316a9_onEachFeature,
+            
+                style: geo_json_cd202b0a399074ee66529748d21316a9_styler,
+        });
+
+        function geo_json_cd202b0a399074ee66529748d21316a9_add (data) {
+            geo_json_cd202b0a399074ee66529748d21316a9
+                .addData(data)
+                .addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+        }
+            geo_json_cd202b0a399074ee66529748d21316a9_add({"features": [{"geometry": {"coordinates": [[[55.925025039583744, 58.012562853331275], [55.92425919753353, 58.01225712436269], [55.93455701866651, 58.00686658615197], [55.93431517984229, 58.00686658615197], [55.931618677318994, 58.005318114025556], [55.930294974730515, 58.006195679874736], [55.92840367615804, 58.006199478289574], [55.928454996145376, 58.005634375343675], [55.929982854180366, 58.00458222387837], [55.92952239163077, 58.004596476557936], [55.92442987990225, 58.00184047537684], [55.92473144969139, 58.001698223723054], [55.92590917774291, 58.00110102441221], [55.92652230148349, 58.00104963631492], [55.927435928838975, 58.001041682541], [55.929683979585775, 57.99978166103642], [55.93864541191439, 58.004699414206044], [55.94174873121648, 58.00656757085207], [55.9420513914412, 58.00740308089249], [55.94194803900666, 58.00834865200565], [55.9414632608555, 58.00906521654855], [55.93986373105804, 58.009781608507666], [55.93799191310609, 58.00886729982673], [55.9366957669892, 58.00957895076286], [55.93541166369354, 58.01015519924434], [55.9357284320746, 58.01122953914293], [55.925025039583744, 58.012562853331275]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d837471948cc1f486eb30e4e0b91ac80 = L.popup({"maxWidth": 150});
+
+        
+            
+                var html_86eb8e83e24f121f449e08237e7d8c43 = $(`<div id="html_86eb8e83e24f121f449e08237e7d8c43" style="width: 100.0%; height: 100.0%;">Средняя стоимость за кв.м.: nanр.</div>`)[0];
+                popup_d837471948cc1f486eb30e4e0b91ac80.setContent(html_86eb8e83e24f121f449e08237e7d8c43);
+            
+        
+
+        geo_json_cd202b0a399074ee66529748d21316a9.bindPopup(popup_d837471948cc1f486eb30e4e0b91ac80)
+        ;
+
+        
+    
+    
+    var color_map_47f53193f6f98aa78eaddb7e9bee65a8 = {};
+
+    
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.color = d3.scale.threshold()
+              .domain([66101.69491525424, 66278.88830903571, 66456.08170281717, 66633.27509659865, 66810.46849038012, 66987.66188416159, 67164.85527794306, 67342.04867172454, 67519.24206550601, 67696.43545928747, 67873.62885306895, 68050.82224685042, 68228.01564063189, 68405.20903441336, 68582.40242819484, 68759.5958219763, 68936.78921575777, 69113.98260953925, 69291.17600332072, 69468.36939710219, 69645.56279088366, 69822.75618466514, 69999.9495784466, 70177.14297222807, 70354.33636600955, 70531.52975979101, 70708.72315357249, 70885.91654735396, 71063.10994113544, 71240.3033349169, 71417.49672869837, 71594.69012247985, 71771.88351626131, 71949.07691004279, 72126.27030382426, 72303.46369760574, 72480.6570913872, 72657.85048516867, 72835.04387895015, 73012.23727273161, 73189.43066651309, 73366.62406029456, 73543.81745407602, 73721.0108478575, 73898.20424163897, 74075.39763542044, 74252.59102920191, 74429.78442298339, 74606.97781676485, 74784.17121054632, 74961.3646043278, 75138.55799810927, 75315.75139189074, 75492.94478567221, 75670.13817945369, 75847.33157323516, 76024.52496701662, 76201.7183607981, 76378.91175457957, 76556.10514836104, 76733.29854214251, 76910.49193592399, 77087.68532970545, 77264.87872348692, 77442.0721172684, 77619.26551104986, 77796.45890483134, 77973.65229861281, 78150.84569239429, 78328.03908617575, 78505.23247995722, 78682.4258737387, 78859.61926752016, 79036.81266130164, 79214.00605508311, 79391.19944886457, 79568.39284264605, 79745.58623642752, 79922.779630209, 80099.97302399046, 80277.16641777194, 80454.35981155341, 80631.55320533487, 80808.74659911635, 80985.93999289782, 81163.13338667928, 81340.32678046076, 81517.52017424224, 81694.7135680237, 81871.90696180517, 82049.10035558665, 82226.29374936812, 82403.48714314958, 82580.68053693106, 82757.87393071254, 82935.067324494, 83112.26071827547, 83289.45411205695, 83466.64750583842, 83643.84089961989, 83821.03429340136, 83998.22768718284, 84175.4210809643, 84352.61447474577, 84529.80786852725, 84707.00126230871, 84884.19465609019, 85061.38804987166, 85238.58144365312, 85415.7748374346, 85592.96823121607, 85770.16162499755, 85947.35501877902, 86124.54841256049, 86301.74180634196, 86478.93520012344, 86656.1285939049, 86833.32198768637, 87010.51538146785, 87187.70877524931, 87364.90216903079, 87542.09556281226, 87719.28895659372, 87896.4823503752, 88073.67574415667, 88250.86913793813, 88428.06253171961, 88605.25592550109, 88782.44931928255, 88959.64271306402, 89136.8361068455, 89314.02950062697, 89491.22289440843, 89668.41628818991, 89845.60968197139, 90022.80307575286, 90199.99646953432, 90377.1898633158, 90554.38325709727, 90731.57665087873, 90908.77004466021, 91085.96343844169, 91263.15683222315, 91440.35022600462, 91617.5436197861, 91794.73701356756, 91971.93040734903, 92149.12380113051, 92326.31719491197, 92503.51058869345, 92680.70398247492, 92857.89737625638, 93035.09077003786, 93212.28416381933, 93389.47755760081, 93566.67095138229, 93743.86434516375, 93921.05773894522, 94098.2511327267, 94275.44452650816, 94452.63792028964, 94629.83131407111, 94807.02470785257, 94984.21810163405, 95161.41149541552, 95338.60488919698, 95515.79828297846, 95692.99167675994, 95870.1850705414, 96047.37846432287, 96224.57185810435, 96401.76525188581, 96578.95864566728, 96756.15203944876, 96933.34543323024, 97110.5388270117, 97287.73222079317, 97464.92561457465, 97642.11900835612, 97819.31240213758, 97996.50579591906, 98173.69918970054, 98350.892583482, 98528.08597726347, 98705.27937104495, 98882.47276482641, 99059.66615860788, 99236.85955238936, 99414.05294617082, 99591.24633995231, 99768.43973373377, 99945.63312751523, 100122.82652129671, 100300.01991507818, 100477.21330885965, 100654.40670264114, 100831.6000964226, 101008.79349020407, 101185.98688398555, 101363.18027776701, 101540.37367154848, 101717.56706532996, 101894.76045911142, 102071.9538528929, 102249.14724667437, 102426.34064045583, 102603.53403423731, 102780.72742801878, 102957.92082180025, 103135.11421558172, 103312.3076093632, 103489.50100314466, 103666.69439692615, 103843.88779070761, 104021.08118448908, 104198.27457827055, 104375.46797205202, 104552.66136583348, 104729.85475961497, 104907.04815339643, 105084.24154717791, 105261.43494095939, 105438.62833474085, 105615.82172852232, 105793.0151223038, 105970.20851608526, 106147.40190986675, 106324.59530364821, 106501.78869742967, 106678.98209121115, 106856.17548499262, 107033.36887877408, 107210.56227255556, 107387.75566633703, 107564.9490601185, 107742.14245389999, 107919.33584768145, 108096.52924146292, 108273.7226352444, 108450.91602902586, 108628.10942280732, 108805.30281658881, 108982.49621037027, 109159.68960415175, 109336.88299793322, 109514.07639171468, 109691.26978549616, 109868.46317927763, 110045.6565730591, 110222.84996684059, 110400.04336062205, 110577.23675440352, 110754.43014818498, 110931.62354196646, 111108.81693574792, 111286.01032952941, 111463.20372331087, 111640.39711709233, 111817.59051087382, 111994.78390465528, 112171.97729843676, 112349.17069221823, 112526.3640859997, 112703.55747978117, 112880.75087356265, 113057.94426734411, 113235.13766112558, 113412.33105490706, 113589.52444868852, 113766.71784247, 113943.91123625147, 114121.10463003293, 114298.29802381442, 114475.49141759588, 114652.68481137736, 114829.87820515884, 115007.0715989403, 115184.26499272176, 115361.45838650325, 115538.65178028471, 115715.84517406618, 115893.03856784766, 116070.23196162912, 116247.4253554106, 116424.61874919207, 116601.81214297353, 116779.00553675501, 116956.19893053648, 117133.39232431795, 117310.58571809942, 117487.7791118809, 117664.97250566236, 117842.16589944383, 118019.35929322531, 118196.55268700677, 118373.74608078826, 118550.93947456972, 118728.1328683512, 118905.32626213267, 119082.51965591413, 119259.7130496956, 119436.90644347708, 119614.09983725855, 119791.29323104002, 119968.4866248215, 120145.68001860296, 120322.87341238443, 120500.06680616591, 120677.26019994737, 120854.45359372885, 121031.64698751032, 121208.84038129178, 121386.03377507327, 121563.22716885473, 121740.4205626362, 121917.61395641767, 122094.80735019915, 122272.0007439806, 122449.1941377621, 122626.38753154356, 122803.58092532503, 122980.77431910651, 123157.96771288797, 123335.16110666945, 123512.35450045092, 123689.54789423238, 123866.74128801386, 124043.93468179533, 124221.1280755768, 124398.32146935827, 124575.51486313975, 124752.7082569212, 124929.9016507027, 125107.09504448416, 125284.28843826562, 125461.48183204711, 125638.67522582857, 125815.86861961003, 125993.0620133915, 126170.25540717298, 126347.44880095444, 126524.64219473593, 126701.8355885174, 126879.02898229887, 127056.22237608035, 127233.41576986181, 127410.60916364328, 127587.80255742476, 127764.99595120622, 127942.18934498771, 128119.38273876917, 128296.57613255063, 128473.76952633211, 128650.96292011358, 128828.15631389504, 129005.34970767653, 129182.543101458, 129359.73649523947, 129536.92988902095, 129714.12328280241, 129891.31667658388, 130068.51007036536, 130245.70346414682, 130422.89685792828, 130600.09025170977, 130777.28364549123, 130954.47703927271, 131131.67043305418, 131308.86382683564, 131486.05722061713, 131663.2506143986, 131840.44400818006, 132017.63740196155, 132194.830795743, 132372.02418952447, 132549.21758330596, 132726.41097708742, 132903.60437086888, 133080.79776465037, 133257.99115843183, 133435.1845522133, 133612.37794599478, 133789.57133977624, 133966.7647335577, 134143.9581273392, 134321.15152112066, 134498.34491490212, 134675.5383086836, 134852.73170246507, 135029.92509624653, 135207.11849002802, 135384.3118838095, 135561.50527759094, 135738.69867137243, 135915.89206515392, 136093.08545893535, 136270.27885271684, 136447.4722464983, 136624.6656402798, 136801.85903406126, 136979.05242784275, 137156.24582162418, 137333.43921540567, 137510.63260918716, 137687.82600296862, 137865.01939675008, 138042.21279053157, 138219.40618431303, 138396.5995780945, 138573.79297187598, 138750.98636565742, 138928.1797594389, 139105.3731532204, 139282.56654700186, 139459.75994078332, 139636.9533345648, 139814.14672834627, 139991.34012212773, 140168.53351590922, 140345.72690969068, 140522.92030347214, 140700.11369725363, 140877.3070910351, 141054.50048481656, 141231.69387859805, 141408.8872723795, 141586.08066616097, 141763.27405994246, 141940.46745372395, 142117.66084750538, 142294.85424128687, 142472.04763506836, 142649.2410288498, 142826.43442263128, 143003.62781641274, 143180.82121019423, 143358.0146039757, 143535.20799775718, 143712.40139153862, 143889.5947853201, 144066.7881791016, 144243.98157288303, 144421.17496666452, 144598.36836044598, 144775.56175422747, 144952.75514800893, 145129.94854179042, 145307.14193557185, 145484.33532935334, 145661.52872313483, 145838.7221169163, 146015.91551069776, 146193.10890447925, 146370.3022982607, 146547.49569204217, 146724.68908582366, 146901.88247960512, 147079.07587338658, 147256.26926716807, 147433.46266094953, 147610.656054731, 147787.84944851248, 147965.04284229394, 148142.2362360754, 148319.4296298569, 148496.62302363839, 148673.81641741982, 148851.0098112013, 149028.20320498277, 149205.39659876423, 149382.58999254572, 149559.78338632718, 149736.97678010864, 149914.17017389013, 150091.36356767162, 150268.55696145305, 150445.75035523454, 150622.94374901603, 150800.13714279747, 150977.33053657896, 151154.52393036042, 151331.7173241419, 151508.91071792337, 151686.10411170486, 151863.2975054863, 152040.49089926778, 152217.68429304927, 152394.87768683073, 152572.0710806122, 152749.26447439368, 152926.45786817514, 153103.6512619566, 153280.8446557381, 153458.03804951953, 153635.23144330102, 153812.4248370825, 153989.61823086397, 154166.81162464543, 154344.00501842692, 154521.19841220838])
+              .range(['#249ab4ff', '#249bb4ff', '#259bb5ff', '#259cb5ff', '#269cb5ff', '#269db5ff', '#269db6ff', '#279eb6ff', '#279eb6ff', '#289fb6ff', '#289fb6ff', '#29a0b7ff', '#29a0b7ff', '#2aa1b7ff', '#2aa1b7ff', '#2ba2b8ff', '#2ba2b8ff', '#2ca3b8ff', '#2ca3b8ff', '#2da4b8ff', '#2da4b9ff', '#2da5b9ff', '#2ea5b9ff', '#2ea6b9ff', '#2fa6baff', '#2fa7baff', '#30a7baff', '#30a8baff', '#31a9bbff', '#31a9bbff', '#32aabbff', '#32aabbff', '#33abbbff', '#33abbcff', '#34acbcff', '#34acbcff', '#34adbcff', '#35adbdff', '#35aebdff', '#36aebdff', '#36afbdff', '#37afbdff', '#37b0beff', '#38b0beff', '#38b1beff', '#39b1beff', '#39b2bfff', '#3ab2bfff', '#3ab3bfff', '#3bb3bfff', '#3bb4bfff', '#3bb4c0ff', '#3cb5c0ff', '#3cb5c0ff', '#3db6c0ff', '#3db6c1ff', '#3eb7c1ff', '#3eb7c1ff', '#3fb8c1ff', '#3fb8c2ff', '#40b9c2ff', '#40bac2ff', '#41bac2ff', '#41bbc2ff', '#42bbc2ff', '#43bbc2ff', '#44bcc2ff', '#45bcc2ff', '#46bdc2ff', '#47bdc2ff', '#48bec2ff', '#49bec2ff', '#49bec2ff', '#4abfc2ff', '#4bbfc2ff', '#4cc0c2ff', '#4dc0c2ff', '#4ec1c2ff', '#4fc1c3ff', '#50c1c3ff', '#51c2c3ff', '#52c2c3ff', '#52c3c3ff', '#53c3c3ff', '#54c4c3ff', '#55c4c3ff', '#56c4c3ff', '#57c5c3ff', '#58c5c3ff', '#59c6c3ff', '#5ac6c3ff', '#5bc7c3ff', '#5bc7c3ff', '#5cc8c3ff', '#5dc8c3ff', '#5ec8c3ff', '#5fc9c3ff', '#60c9c3ff', '#61cac3ff', '#62cac3ff', '#63cbc3ff', '#64cbc3ff', '#64cbc3ff', '#65ccc3ff', '#66ccc3ff', '#67cdc3ff', '#68cdc3ff', '#69cec3ff', '#6acec3ff', '#6bcec3ff', '#6ccfc3ff', '#6dcfc3ff', '#6dd0c3ff', '#6ed0c3ff', '#6fd1c3ff', '#70d1c3ff', '#71d2c3ff', '#72d2c3ff', '#73d2c3ff', '#74d3c3ff', '#75d3c3ff', '#76d4c3ff', '#76d4c3ff', '#77d5c3ff', '#78d5c3ff', '#79d5c3ff', '#7ad6c3ff', '#7bd6c3ff', '#7cd6c3ff', '#7dd7c3ff', '#7ed7c3ff', '#7fd7c3ff', '#80d8c3ff', '#81d8c2ff', '#83d8c2ff', '#84d9c2ff', '#85d9c2ff', '#86d9c2ff', '#87dac2ff', '#88dac2ff', '#89dac2ff', '#8adbc2ff', '#8bdbc2ff', '#8cdcc2ff', '#8ddcc1ff', '#8edcc1ff', '#8fddc1ff', '#90ddc1ff', '#91ddc1ff', '#92dec1ff', '#93dec1ff', '#94dec1ff', '#95dfc1ff', '#96dfc1ff', '#97dfc0ff', '#98e0c0ff', '#99e0c0ff', '#9ae0c0ff', '#9be1c0ff', '#9ce1c0ff', '#9de1c0ff', '#9ee2c0ff', '#9fe2c0ff', '#a0e2c0ff', '#a1e3bfff', '#a2e3bfff', '#a3e3bfff', '#a4e4bfff', '#a6e4bfff', '#a7e4bfff', '#a8e5bfff', '#a9e5bfff', '#aae5bfff', '#abe6bfff', '#ace6bfff', '#ade6beff', '#aee7beff', '#afe7beff', '#b0e7beff', '#b1e8beff', '#b2e8beff', '#b3e8beff', '#b4e9beff', '#b5e9beff', '#b6e9beff', '#b7eabdff', '#b8eabdff', '#b9eabdff', '#baeabdff', '#bbeabdff', '#bceabdff', '#bdeabdff', '#beeabdff', '#bfeabdff', '#c0eabdff', '#c1eabdff', '#c2eabeff', '#c3eabeff', '#c4eabeff', '#c5eabeff', '#c6eabeff', '#c7eabeff', '#c8eabeff', '#c9eabeff', '#caeabeff', '#cbeabeff', '#cceabeff', '#cdeabeff', '#ceeabeff', '#cfeabeff', '#d0eabeff', '#d1eabeff', '#d2eabeff', '#d3eabeff', '#d4eabeff', '#d5eabeff', '#d7e9beff', '#d8e9beff', '#d9e9beff', '#dae9beff', '#dbe9beff', '#dce9beff', '#dde9beff', '#dee9beff', '#dfe9beff', '#e0e9beff', '#e1e9beff', '#e2e9bfff', '#e3e9bfff', '#e4e9bfff', '#e5e9bfff', '#e6e9bfff', '#e7e9bfff', '#e8e9bfff', '#e9e9bfff', '#eae9bfff', '#ebe9bfff', '#ece9bfff', '#ede9bfff', '#eee9bfff', '#efe9bfff', '#f0e9bfff', '#f1e9bfff', '#f2e9bfff', '#f3e9bfff', '#f4e9bfff', '#f5e9bfff', '#f6e8bfff', '#f7e8bfff', '#f8e8bfff', '#f9e8bfff', '#f9e8bfff', '#f9e7bfff', '#f9e7bfff', '#f9e6bfff', '#f9e5bfff', '#f9e5bfff', '#f9e4bfff', '#f9e4bfff', '#f9e3beff', '#f9e3beff', '#f9e2beff', '#f9e2beff', '#fae1beff', '#fae1beff', '#fae0beff', '#fae0beff', '#fadfbeff', '#fadfbeff', '#fadebeff', '#fadebeff', '#faddbeff', '#fadcbdff', '#fadcbdff', '#fadbbdff', '#fbdbbdff', '#fbdabdff', '#fbdabdff', '#fbd9bdff', '#fbd9bdff', '#fbd8bdff', '#fbd8bdff', '#fbd7bdff', '#fbd7bdff', '#fbd6bcff', '#fbd6bcff', '#fbd5bcff', '#fbd4bcff', '#fcd4bcff', '#fcd3bcff', '#fcd3bcff', '#fcd2bcff', '#fcd2bcff', '#fcd1bcff', '#fcd1bcff', '#fcd0bcff', '#fcd0bcff', '#fccfbbff', '#fccfbbff', '#fccebbff', '#fdcebbff', '#fdcdbbff', '#fdcdbbff', '#fdccbbff', '#fdcbbbff', '#fdcbbbff', '#fdcabbff', '#fdcabbff', '#fdc9bbff', '#fdc9baff', '#fdc8baff', '#fdc8baff', '#fdc7baff', '#fdc6baff', '#fdc6b9ff', '#fdc5b9ff', '#fdc4b8ff', '#fdc4b7ff', '#fdc3b7ff', '#fdc2b6ff', '#fdc1b6ff', '#fdc1b5ff', '#fdc0b5ff', '#fdbfb4ff', '#fdbeb4ff', '#fdbeb3ff', '#fdbdb2ff', '#fdbcb2ff', '#fdbcb1ff', '#fdbbb1ff', '#fdbab0ff', '#fdb9b0ff', '#fdb9afff', '#fdb8afff', '#fdb7aeff', '#fdb7aeff', '#fdb6adff', '#fdb5acff', '#fdb4acff', '#fdb4abff', '#fdb3abff', '#fdb2aaff', '#fdb1aaff', '#fdb1a9ff', '#fdb0a9ff', '#fdafa8ff', '#fdafa8ff', '#fdaea7ff', '#fdada6ff', '#fdaca6ff', '#fdaca5ff', '#fdaba5ff', '#fdaaa4ff', '#fda9a4ff', '#fda9a3ff', '#fda8a3ff', '#fda7a2ff', '#fda7a2ff', '#fda6a1ff', '#fda5a0ff', '#fda4a0ff', '#fda49fff', '#fda39fff', '#fda29eff', '#fda29eff', '#fda19dff', '#fda09dff', '#fd9f9cff', '#fd9f9cff', '#fd9e9bff', '#fd9d9aff', '#fd9c9aff', '#fd9c99ff', '#fd9b99ff', '#fd9a98ff', '#fe9998ff', '#fe9897ff', '#fe9797ff', '#fe9696ff', '#fe9696ff', '#fe9595ff', '#fe9495ff', '#fe9394ff', '#fe9294ff', '#fe9194ff', '#fe9093ff', '#fe8f93ff', '#fe8e92ff', '#fe8d92ff', '#fe8c91ff', '#fe8b91ff', '#fe8a90ff', '#fe8990ff', '#fe888fff', '#fe878fff', '#fe868eff', '#fe858eff', '#fe848dff', '#fe838dff', '#fe828dff', '#fe818cff', '#fe808cff', '#fe7f8bff', '#fe7e8bff', '#fe7d8aff', '#fe7c8aff', '#ff7b89ff', '#ff7a89ff', '#ff7a88ff', '#ff7988ff', '#ff7887ff', '#ff7787ff', '#ff7686ff', '#ff7586ff', '#ff7486ff', '#ff7385ff', '#ff7285ff', '#ff7184ff', '#ff7084ff', '#ff6f83ff', '#ff6e83ff', '#ff6d82ff', '#ff6c82ff', '#ff6b81ff', '#ff6a81ff', '#ff6980ff', '#ff6880ff', '#ff677fff', '#ff667fff', '#ff657fff', '#ff647eff', '#ff637eff', '#ff627dff', '#ff617dff', '#ff607cff', '#ff5f7cff', '#ff5e7bff', '#ff5d7bff', '#ff5c7aff', '#fe5b7aff', '#fd5a79ff', '#fd5979ff', '#fc5878ff', '#fb5778ff', '#fb5577ff', '#fa5477ff', '#fa5376ff', '#f95276ff', '#f85175ff', '#f85075ff', '#f74f74ff', '#f64d74ff', '#f64c73ff', '#f54b73ff', '#f54a72ff', '#f44972ff', '#f34871ff', '#f34771ff', '#f24570ff', '#f14470ff', '#f1436fff', '#f0426fff', '#f0416eff', '#ef406eff', '#ee3f6dff', '#ee3d6dff', '#ed3c6cff', '#ec3b6cff', '#ec3a6bff', '#eb396bff', '#eb386aff', '#ea376aff', '#e93569ff', '#e93469ff', '#e83368ff', '#e73268ff', '#e73167ff', '#e63067ff', '#e62f66ff', '#e52d66ff', '#e42c65ff', '#e42b65ff', '#e32a64ff', '#e22964ff', '#e22863ff', '#e12763ff', '#e12562ff', '#e02462ff', '#df2361ff', '#df2261ff', '#de2160ff', '#dd2060ff', '#dd1f5fff', '#dc1d5fff', '#db1c5eff', '#db1b5eff', '#da1a5dff', '#da195dff', '#d9185cff', '#d8175cff']);
+    
+
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.x = d3.scale.linear()
+              .domain([66101.69491525424, 154521.19841220838])
+              .range([0, 450 - 50]);
+
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.legend = L.control({position: 'topright'});
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.legend.addTo(map_ab285e836d76d4bf7f9a5345668f0bd0);
+
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.xAxis = d3.svg.axis()
+        .scale(color_map_47f53193f6f98aa78eaddb7e9bee65a8.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([66101.69491525424, 77154.1328523735, 88206.57078949278, 99259.00872661204, 110311.4466637313, 121363.88460085058, 132416.32253796986, 143468.76047508913, 154521.19841220838]);
+
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.g = color_map_47f53193f6f98aa78eaddb7e9bee65a8.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.g.selectAll("rect")
+        .data(color_map_47f53193f6f98aa78eaddb7e9bee65a8.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_47f53193f6f98aa78eaddb7e9bee65a8.x(color_map_47f53193f6f98aa78eaddb7e9bee65a8.color.domain()[i - 1]) : color_map_47f53193f6f98aa78eaddb7e9bee65a8.x.range()[0],
+            x1: i < color_map_47f53193f6f98aa78eaddb7e9bee65a8.color.domain().length ? color_map_47f53193f6f98aa78eaddb7e9bee65a8.x(color_map_47f53193f6f98aa78eaddb7e9bee65a8.color.domain()[i]) : color_map_47f53193f6f98aa78eaddb7e9bee65a8.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_47f53193f6f98aa78eaddb7e9bee65a8.g.call(color_map_47f53193f6f98aa78eaddb7e9bee65a8.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text("\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c \u043a\u0432 \u043c");
+</script>
+</html>

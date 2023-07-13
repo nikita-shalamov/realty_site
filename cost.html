@@ -1,0 +1,68 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css">
+    <title>Главная</title>
+    <style>
+        * {
+         margin: 0;
+         padding: 0;
+        }
+       </style>
+
+<link rel="stylesheet" href="my.css"
+    type="text/css">
+    <script src="myscript.js"></script>
+</head>
+ 
+<body>
+    <header> 
+        <img src="X.png" class="logoImg">
+        <ul class="menu-main">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="cost.html" class="current">Карты</a></li>
+            <li><a href="chart.html">Графики</a></li>
+            <li><a onclick="alert('nikita.shalamov2004@mail.ru')">Обратная связь</a></li>
+        </ul>
+    </header>
+    
+    <p class="costph3">Карта стоимости недвижимости</p>
+    <div class="costDivFilter">
+        <p class="costPh1">Фильтры</p>
+        <p class="costPh2">Площадь</p>
+        <input type="radio" id="radioButton1" name="radioButton" onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;" checked>
+        <input type="radio" id="radioButton2" name="radioButton" onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;">
+        <input type="radio" id="radioButton3" name="radioButton" onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;">
+        <input type="radio" id="radioButton4" name="radioButton" onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;">
+        <input type="radio" id="radioButton5" name="radioButton" onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;">
+        <p class="radioButtonText1">20-40 м²</p>
+        <p class="radioButtonText2">40-60 м²</p>
+        <p class="radioButtonText3">60-80 м²</p>
+        <p class="radioButtonText4">80+ м²</p>
+        <p class="radioButtonText5">Все варианты</p>      
+        <button type="button" class="costButton" onclick="changePicture()">Поиск</button>
+    </div>
+    <div class="mapCostDiv">
+
+        <object type="text/html" data="карта 1.html" id="mapCost"></object>
+    </div>
+    <div class="costDivFilter1">
+        <p class="costPh1">Фильтры</p>
+        <p class="costPh2">Инфраструтура</p>
+        <input type="radio" id="radioButton1" name="radioButton1">
+        <p class="radioButtonText1">Транспортная доступность</p>    
+        <button type="button" class="costButton1" checked>Поиск</button>
+    </div>
+
+    <div class="mapCostDiv1">
+<p style = "font-size: 48px; position: relative; left: 20%;" >Карта инфраструктуры</p>
+        <object type="text/html" data="transport_access.html" class="mapCost1"></object>
+    </div>
+
+    <div class="mapCostDiv2">
+ <p style = "font-size: 48px; position: relative; left: 20%;" >Карта дохода от аренды</p>
+        <object type="text/html" data="карта дохода.html" class="mapCost1"></object>
+    </div>
+    <div class="divCostSecret"></div>
+   </body>
+
+</html>
